@@ -1,0 +1,76 @@
+module.exports = {
+  content: [
+     "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "tertiary-fixed": "#acedff",
+        "inverse-on-surface": "#283044",
+        "on-primary-container": "#005b6c",
+        "on-secondary-fixed": "#25005a",
+        "secondary-fixed": "#eaddff",
+        "background": "#0b1326",
+        "surface-variant": "#2d3449",
+        "outline": "#859398",
+        "surface-container": "#171f33",
+        "on-error": "#690005",
+        "inverse-primary": "#00687b",
+        "primary-fixed": "#aeecff",
+        "on-tertiary-fixed-variant": "#004e5c",
+        "on-tertiary-fixed": "#001f26",
+        "secondary-fixed-dim": "#d2bbff",
+        "tertiary-container": "#4cd7f6",
+        "surface-dim": "#0b1326",
+        "primary-fixed-dim": "#00d9ff",
+        "outline-variant": "#3c494d",
+        "surface-tint": "#00d9ff",
+        "on-secondary-fixed-variant": "#5a00c6",
+        "on-surface": "#dae2fd",
+        "surface-container-high": "#222a3d",
+        "on-surface-variant": "#bbc9ce",
+        "on-tertiary": "#003640",
+        "inverse-surface": "#dae2fd",
+        "on-secondary-container": "#c9aeff",
+        "primary": "#afecff",
+        "primary-container": "#00d9ff",
+        "surface": "#0b1326",
+        "on-tertiary-container": "#005b6b",
+        "on-primary": "#003641",
+        "surface-container-low": "#131b2e",
+        "on-background": "#dae2fd",
+        "on-primary-fixed-variant": "#004e5d",
+        "tertiary": "#acedff",
+        "secondary": "#d2bbff",
+        "surface-container-lowest": "#060e20",
+        "error": "#ffb4ab",
+        "on-error-container": "#ffdad6",
+        "on-secondary": "#3f008e",
+        "on-primary-fixed": "#001f26",
+        "secondary-container": "#6001d1",
+        "error-container": "#93000a",
+        "tertiary-fixed-dim": "#4cd7f6",
+        "surface-container-highest": "#2d3449",
+        "surface-bright": "#31394d"
+      },
+      borderRadius: {
+        DEFAULT: "0.125rem",
+        lg: "0.25rem",
+        xl: "0.5rem",
+        full: "0.75rem"
+      },
+      fontFamily: {
+        headline: ["Plus Jakarta Sans"],
+        body: ["Inter"],
+        label: ["Space Grotesk"]
+      },
+      animation: {
+        ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
+        pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+      }
+    },
+  },
+  plugins: [],
+};
