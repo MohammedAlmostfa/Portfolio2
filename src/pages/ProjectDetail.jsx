@@ -171,10 +171,10 @@ const ProjectDetail = () => {
       <div className="rounded-2xl overflow-hidden bg-surface-container-low flex items-center justify-center min-h-[300px] md:min-h-[400px]">
         {currentImage && currentImage.src ? (
           <img 
-            src={currentImage.src} 
+            src={`${import.meta.env.BASE_URL}${currentImage.src}`}
             alt={currentImage.alt || project.title} 
             className="w-full h-auto max-h-[500px] object-contain transition-all duration-300 hover:scale-105"
-            style={{ backgroundColor: '#1e1e2f' }} // خلفية للصور الشفافة
+            style={{ backgroundColor: '#1e1e2f' }}
             loading="lazy"
           />
         ) : (
@@ -185,7 +185,7 @@ const ProjectDetail = () => {
         )}
       </div>
 
-      {/* أزرار التنقل (تظهر فقط عند hover على سطح المكتب، أو دائماً على اللمس) */}
+      {/* أزرار التنقل */}
       {images.length > 1 && (
         <>
           <button 
@@ -206,15 +206,19 @@ const ProjectDetail = () => {
       )}
     </div>
 
-    {/* عنوان ووصف الصورة الحالية */}
+    {/* عنوان ووصف الصورة */}
     {currentImage && (
       <div className="space-y-2 text-center lg:text-left px-2">
-        <h4 className="text-xl font-bold text-on-surface">{currentImage.title || "Image"}</h4>
-        <p className="text-on-surface-variant text-sm leading-relaxed">{currentImage.description || ""}</p>
+        <h4 className="text-xl font-bold text-on-surface">
+          {currentImage.title || "Image"}
+        </h4>
+        <p className="text-on-surface-variant text-sm leading-relaxed">
+          {currentImage.description || ""}
+        </p>
       </div>
     )}
 
-    {/* الصور المصغرة - تنسيق شبكي متجاوب */}
+    {/* الصور المصغرة */}
     {images.length > 1 && (
       <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2 md:gap-3 mt-4">
         {images.map((image, idx) => (
@@ -230,7 +234,7 @@ const ProjectDetail = () => {
             `}
           >
             <img 
-              src={image.src} 
+              src={`${import.meta.env.BASE_URL}${image.src}`}
               alt={image.alt || `Thumbnail ${idx + 1}`} 
               className="w-full h-full object-cover"
               loading="lazy"
