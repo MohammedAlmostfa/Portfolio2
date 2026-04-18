@@ -27,16 +27,15 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
             <div className="absolute p-4 sm:p-8 md:p-10 w-full h-full flex flex-col">
               <div>
-                <div className="flex gap-2 mb-3 sm:mb-4 flex-wrap">
-                  <span className="px-2 sm:px-3 py-1 bg-primary/10 text-primary text-xs uppercase rounded-full">Laravel</span>
-                  <span className="px-2 sm:px-3 py-1 bg-secondary/10 text-secondary text-xs uppercase rounded-full">MVC Architecture</span>
-                </div>
+              
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">Educational Platform</h3>
                 <p className="text-on-surface-variant max-w-lg mb-4 sm:mb-6 text-xs sm:text-sm md:text-base">A robust and scalable educational platform built with Laravel.</p>
-                <ul className="flex gap-3 sm:gap-6 text-xs sm:text-sm text-on-surface-variant flex-wrap">
-                  <li className="flex items-center gap-2"><span className="material-symbols-outlined text-xs">check_circle</span>Role-Based Access</li>
-                  <li className="flex items-center gap-2"><span className="material-symbols-outlined text-xs">check_circle</span>Course Management</li>
-                </ul>
+                 <div className="flex flex-wrap gap-2">
+        <span className="px-2 py-1 bg-surface-container-highest text-xs rounded">Laravel</span>
+        <span className="px-2 py-1 bg-surface-container-highest text-xs rounded">MySQL</span>
+        <span className="px-2 py-1 bg-surface-container-highest text-xs rounded">JWT</span>
+  
+      </div>
               </div>
               <div className="mt-auto">
                 <Link to="/project-details?name=Educational%20Platform" onClick={scrollToTop} className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300 group/link">
@@ -48,28 +47,30 @@ const ProjectsSection = () => {
           </div>
 
           {/* Project 2: Wasalni */}
-          <div className="group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-surface-container-low h-64 sm:h-96 md:h-[400px] flex flex-col">
-            <div className="absolute inset-0 logic-gradient opacity-10"></div>
-            <div className="absolute inset-0 p-4 sm:p-8 md:p-10 flex flex-col">
-              <div>
-                <span className="material-symbols-outlined text-4xl sm:text-5xl text-primary-container mb-3 sm:mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>directions_car</span>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">Wasalni</h3>
-                <p className="text-on-surface-variant text-xs sm:text-sm mb-3 sm:mb-6">A scalable ride-sharing backend system built with Laravel that connects users with service providers through trip booking and real-time notifications.</p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 bg-surface-container-highest text-xs rounded">Laravel</span>
-                  <span className="px-2 py-1 bg-surface-container-highest text-xs rounded">MySQL</span>
-                  <span className="px-2 py-1 bg-surface-container-highest text-xs rounded">JWT</span>
-                  <span className="px-2 py-1 bg-surface-container-highest text-xs rounded">FCM</span>
-                </div>
-              </div>
-              <div className="mt-auto">
-                <Link to="/project-details?name=Wasalni" onClick={scrollToTop} className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300 group/link">
-                  <span className="text-sm sm:text-base font-medium">show details</span>
-                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
-                </Link>
-              </div>
-            </div>
-          </div>
+
+<div className="group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-surface-container-low h-64 sm:h-96 md:h-[400px] flex flex-col">
+  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-30"></div>
+  <div className="absolute inset-0 p-4 sm:p-8 md:p-10 flex flex-col">
+    <div>
+      <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">Wasalni</h3>
+      <p className="text-on-surface-variant text-xs sm:text-sm mb-3 sm:mb-6">
+        A scalable ride-sharing backend system built with Laravel that connects users with service providers through trip booking and real-time notifications.
+      </p>
+      <div className="flex flex-wrap gap-2">
+        <span className="px-2 py-1 bg-surface-container-highest text-xs rounded">Laravel</span>
+        <span className="px-2 py-1 bg-surface-container-highest text-xs rounded">MySQL</span>
+        <span className="px-2 py-1 bg-surface-container-highest text-xs rounded">JWT</span>
+        <span className="px-2 py-1 bg-surface-container-highest text-xs rounded">FCM</span>
+      </div>
+    </div>
+    <div className="mt-auto">
+      <Link to="/project-details?name=Wasalni" onClick={scrollToTop} className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300 group/link">
+        <span className="text-sm sm:text-base font-medium">show details</span>
+        <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+      </Link>
+    </div>
+  </div>
+</div>
 
           {/* Project 3 & 4 */}
           <div className="project-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -138,7 +139,8 @@ const ProjectsSection = () => {
               </div>
             </div>
           </div>
-   {/* Project 7: OBG Marketplace */}
+
+          {/* Project 6: OBG Marketplace */}
           <div className="project-lg group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-surface-container h-64 sm:h-96 md:h-[400px] flex flex-col">
             <img src={projectImg3} className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700" alt="OBG Marketplace" />
             <div className="absolute inset-0 bg-gradient-to-r from-surface-container to-transparent"></div>
@@ -161,7 +163,8 @@ const ProjectsSection = () => {
               </div>
             </div>
           </div>
-          {/* Project 6: vocaApp - NEW */}
+
+          {/* Project 7: vocaApp */}
           <div className="group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-surface-container-low h-64 sm:h-96 md:h-[400px] flex flex-col">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-30"></div>
             <div className="absolute inset-0 p-4 sm:p-8 md:p-10 flex flex-col">
@@ -182,8 +185,6 @@ const ProjectsSection = () => {
               </div>
             </div>
           </div>
-
-       
         </div>
       </div>
     </section>
