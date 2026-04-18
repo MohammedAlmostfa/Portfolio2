@@ -174,7 +174,7 @@ const ProjectDetail = () => {
             src={`${import.meta.env.BASE_URL}${currentImage.src}`}
             alt={currentImage.alt || project.title} 
             className="w-full h-auto max-h-[500px] object-contain transition-all duration-300 hover:scale-105"
-            style={{ backgroundColor: '#1e1e2f' }}
+            style={{ backgroundColor: '#0b1326' }}
             loading="lazy"
           />
         ) : (
