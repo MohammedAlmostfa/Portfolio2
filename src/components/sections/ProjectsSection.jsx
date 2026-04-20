@@ -1,61 +1,12 @@
+// src/components/sections/ProjectsSection.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import projectImg1 from '../../assets/unnamed.png';
-import projectImg2 from '../../assets/unnamed(1).png';
-import projectImg3 from '../../assets/unnamed(2).png';
-import { fadeInUp, staggerContainer, cardVariants, liftOnHover, scaleOnHover } from '../../animations/variants';
+import { fadeInUp, staggerContainer, cardVariants } from '../../animations/variants';
+import { projectsText, projects } from '../../data/projectsData';
 
 const ProjectsSection = () => {
   const scrollToTop = () => window.scrollTo(0, 0);
-
-  // تكوينات المشاريع لتجنب التكرار (اختياري للتنظيف)
-  const projects = {
-    educational: {
-      name: 'Educational Platform',
-      desc: 'A robust and scalable educational platform built with Laravel.',
-      tech: ['Laravel', 'MySQL', 'JWT'],
-      img: projectImg2,
-      link: 'Educational%20Platform',
-    },
-    wasalni: {
-      name: 'Wasalni',
-      desc: 'A scalable ride-sharing backend system built with Laravel that connects users with service providers through trip booking and real-time notifications.',
-      tech: ['Laravel', 'MySQL', 'JWT', 'FCM'],
-      link: 'Wasalni',
-    },
-    restaurant: {
-      name: 'Restaurant Reservation',
-      desc: 'A multi-role restaurant management system built with Laravel enabling customers to book tables and managers to handle reservations.',
-      tech: ['Laravel', 'MySQL', 'JWT', 'FCM'],
-      link: 'Restaurant%20Reservation',
-    },
-    masari: {
-      name: "Masari Al-Jam'iya",
-      desc: 'A university admission guidance platform helping students explore majors and understand admission requirements.',
-      tech: ['Laravel', 'MySQL', 'Auth', 'FCM'],
-      link: 'Masari%20Al-Jamiya',
-    },
-    erp: {
-      name: 'Statistics ERP',
-      desc: 'A comprehensive enterprise resource planning system managing sales operations, inventory, and financial transactions with advanced reporting.',
-      tech: ['Laravel', 'MySQL', 'JWT', 'WhatsApp'],
-      link: 'Statistics%20ERP',
-    },
-    obg: {
-      name: 'OBG Marketplace',
-      desc: 'A scalable secondhand marketplace platform for buying and selling used tools and equipment with secure payment processing.',
-      tech: ['Laravel', 'MySQL', 'JWT', 'FCM'],
-      img: projectImg3,
-      link: 'OBG%20Marketplace',
-    },
-    vocaApp: {
-      name: 'vocaApp',
-      desc: 'A mobile app for saving and reviewing English vocabulary using spaced repetition. Built with React + Capacitor + SQLite.',
-      tech: ['React', 'Capacitor', 'SQLite'],
-      link: 'vocaApp',
-    },
-  };
 
   return (
     <motion.section
@@ -73,8 +24,12 @@ const ProjectsSection = () => {
           className="mb-12 sm:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 sm:gap-8"
         >
           <div>
-            <span className="text-primary font-label tracking-widest uppercase text-xs sm:text-sm mb-2 block">Case Studies</span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline text-white">Featured Engineering</h2>
+            <span className="text-primary font-label tracking-widest uppercase text-xs sm:text-sm mb-2 block">
+              {projectsText.badge}
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline text-white">
+              {projectsText.title}
+            </h2>
           </div>
           <motion.div
             whileHover={{ x: 8 }}
@@ -85,7 +40,8 @@ const ProjectsSection = () => {
               className="text-primary-container font-bold flex items-center gap-2 hover:translate-x-2 transition-transform text-sm sm:text-base"
               onClick={scrollToTop}
             >
-              View Archive <span className="material-symbols-outlined">arrow_forward</span>
+              {projectsText.viewArchive}{' '}
+              <span className="material-symbols-outlined">arrow_forward</span>
             </Link>
           </motion.div>
         </motion.div>
@@ -101,7 +57,7 @@ const ProjectsSection = () => {
             whileHover="hover"
             className="project-lg group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-surface-container-low h-64 sm:h-96 md:h-[400px] flex flex-col"
           >
-            <motion.img  
+            <motion.img
               className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700"
               src={projects.educational.img}
               alt={projects.educational.name}
@@ -112,8 +68,12 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
             <div className="absolute p-4 sm:p-8 md:p-10 w-full h-full flex flex-col">
               <div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">{projects.educational.name}</h3>
-                <p className="text-on-surface-variant max-w-lg mb-4 sm:mb-6 text-xs sm:text-sm md:text-base">{projects.educational.desc}</p>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">
+                  {projects.educational.name}
+                </h3>
+                <p className="text-on-surface-variant max-w-lg mb-4 sm:mb-6 text-xs sm:text-sm md:text-base">
+                  {projects.educational.desc}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {projects.educational.tech.map((tech, idx) => (
                     <motion.span
@@ -133,8 +93,10 @@ const ProjectsSection = () => {
                   onClick={scrollToTop}
                   className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300 group/link"
                 >
-                  <span className="text-sm sm:text-base font-medium">show details</span>
-                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+                  <span className="text-sm sm:text-base font-medium">{projectsText.showDetails}</span>
+                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">
+                    arrow_forward
+                  </span>
                 </Link>
               </div>
             </div>
@@ -149,8 +111,12 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-30"></div>
             <div className="absolute inset-0 p-4 sm:p-8 md:p-10 flex flex-col">
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">{projects.wasalni.name}</h3>
-                <p className="text-on-surface-variant text-xs sm:text-sm mb-3 sm:mb-6">{projects.wasalni.desc}</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">
+                  {projects.wasalni.name}
+                </h3>
+                <p className="text-on-surface-variant text-xs sm:text-sm mb-3 sm:mb-6">
+                  {projects.wasalni.desc}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {projects.wasalni.tech.map((tech, idx) => (
                     <motion.span
@@ -169,8 +135,10 @@ const ProjectsSection = () => {
                   onClick={scrollToTop}
                   className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300 group/link"
                 >
-                  <span className="text-sm sm:text-base font-medium">show details</span>
-                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+                  <span className="text-sm sm:text-base font-medium">{projectsText.showDetails}</span>
+                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">
+                    arrow_forward
+                  </span>
                 </Link>
               </div>
             </div>
@@ -187,11 +155,18 @@ const ProjectsSection = () => {
               className="p-4 sm:p-8 bg-surface-container rounded-2xl sm:rounded-3xl hover:bg-surface-container-high transition-all flex flex-col"
             >
               <div>
-                <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{projects.restaurant.name}</h3>
-                <p className="text-on-surface-variant mb-4 sm:mb-6 text-xs sm:text-sm">{projects.restaurant.desc}</p>
+                <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">
+                  {projects.restaurant.name}
+                </h3>
+                <p className="text-on-surface-variant mb-4 sm:mb-6 text-xs sm:text-sm">
+                  {projects.restaurant.desc}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {projects.restaurant.tech.map((tech, idx) => (
-                    <span key={idx} className="px-2 py-1 bg-surface-container-highest text-xs rounded">
+                    <span
+                      key={idx}
+                      className="px-2 py-1 bg-surface-container-highest text-xs rounded"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -203,8 +178,10 @@ const ProjectsSection = () => {
                   onClick={scrollToTop}
                   className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300 group/link"
                 >
-                  <span className="text-sm sm:text-base font-medium">show details</span>
-                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+                  <span className="text-sm sm:text-base font-medium">{projectsText.showDetails}</span>
+                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">
+                    arrow_forward
+                  </span>
                 </Link>
               </div>
             </motion.div>
@@ -215,11 +192,18 @@ const ProjectsSection = () => {
               className="p-4 sm:p-8 bg-surface-container rounded-2xl sm:rounded-3xl hover:bg-surface-container-high transition-all flex flex-col"
             >
               <div>
-                <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">{projects.masari.name}</h3>
-                <p className="text-on-surface-variant mb-4 sm:mb-6 text-xs sm:text-sm">{projects.masari.desc}</p>
+                <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2">
+                  {projects.masari.name}
+                </h3>
+                <p className="text-on-surface-variant mb-4 sm:mb-6 text-xs sm:text-sm">
+                  {projects.masari.desc}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {projects.masari.tech.map((tech, idx) => (
-                    <span key={idx} className="px-2 py-1 bg-surface-container-highest text-xs rounded">
+                    <span
+                      key={idx}
+                      className="px-2 py-1 bg-surface-container-highest text-xs rounded"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -231,8 +215,10 @@ const ProjectsSection = () => {
                   onClick={scrollToTop}
                   className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300 group/link"
                 >
-                  <span className="text-sm sm:text-base font-medium">show details</span>
-                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+                  <span className="text-sm sm:text-base font-medium">{projectsText.showDetails}</span>
+                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">
+                    arrow_forward
+                  </span>
                 </Link>
               </div>
             </motion.div>
@@ -246,8 +232,12 @@ const ProjectsSection = () => {
           >
             <div className="relative p-4 sm:p-8 md:p-10 border-t-4 border-tertiary flex flex-col gap-4 sm:gap-6">
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">{projects.erp.name}</h3>
-                <p className="text-on-surface-variant text-xs sm:text-sm mb-4 sm:mb-6">{projects.erp.desc}</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">
+                  {projects.erp.name}
+                </h3>
+                <p className="text-on-surface-variant text-xs sm:text-sm mb-4 sm:mb-6">
+                  {projects.erp.desc}
+                </p>
               </div>
               <div className="space-y-4">
                 <div className="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
@@ -259,11 +249,16 @@ const ProjectsSection = () => {
                     viewport={{ once: true }}
                   />
                 </div>
-                <div className="text-xs font-label uppercase text-tertiary">Installment Tracking • Financial Reporting • Inventory</div>
+                <div className="text-xs font-label uppercase text-tertiary">
+                  Installment Tracking • Financial Reporting • Inventory
+                </div>
               </div>
               <div className="flex flex-wrap gap-2 mt-2 sm:mt-4">
                 {projects.erp.tech.map((tech, idx) => (
-                  <span key={idx} className="px-2 py-1 bg-surface-container-highest text-xs rounded">
+                  <span
+                    key={idx}
+                    className="px-2 py-1 bg-surface-container-highest text-xs rounded"
+                  >
                     {tech}
                   </span>
                 ))}
@@ -274,8 +269,10 @@ const ProjectsSection = () => {
                   onClick={scrollToTop}
                   className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300 group/link"
                 >
-                  <span className="text-sm sm:text-base font-medium">show details</span>
-                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+                  <span className="text-sm sm:text-base font-medium">{projectsText.showDetails}</span>
+                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">
+                    arrow_forward
+                  </span>
                 </Link>
               </div>
             </div>
@@ -297,12 +294,19 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-surface-container to-transparent"></div>
             <div className="relative z-10 p-4 sm:p-8 md:p-10 h-full flex flex-col">
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">{projects.obg.name}</h3>
-                <p className="text-on-surface-variant text-xs sm:text-sm">{projects.obg.desc}</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">
+                  {projects.obg.name}
+                </h3>
+                <p className="text-on-surface-variant text-xs sm:text-sm">
+                  {projects.obg.desc}
+                </p>
               </div>
               <div className="flex flex-wrap gap-2 mt-4">
                 {projects.obg.tech.map((tech, idx) => (
-                  <span key={idx} className="px-2 py-1 bg-surface-container-highest text-xs rounded">
+                  <span
+                    key={idx}
+                    className="px-2 py-1 bg-surface-container-highest text-xs rounded"
+                  >
                     {tech}
                   </span>
                 ))}
@@ -313,8 +317,10 @@ const ProjectsSection = () => {
                   onClick={scrollToTop}
                   className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300 group/link"
                 >
-                  <span className="text-sm sm:text-base font-medium">show details</span>
-                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+                  <span className="text-sm sm:text-base font-medium">{projectsText.showDetails}</span>
+                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">
+                    arrow_forward
+                  </span>
                 </Link>
               </div>
             </div>
@@ -329,11 +335,18 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-30"></div>
             <div className="absolute inset-0 p-4 sm:p-8 md:p-10 flex flex-col">
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">{projects.vocaApp.name}</h3>
-                <p className="text-on-surface-variant text-xs sm:text-sm mb-3 sm:mb-6">{projects.vocaApp.desc}</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">
+                  {projects.vocaApp.name}
+                </h3>
+                <p className="text-on-surface-variant text-xs sm:text-sm mb-3 sm:mb-6">
+                  {projects.vocaApp.desc}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {projects.vocaApp.tech.map((tech, idx) => (
-                    <span key={idx} className="px-2 py-1 bg-surface-container-highest text-xs rounded">
+                    <span
+                      key={idx}
+                      className="px-2 py-1 bg-surface-container-highest text-xs rounded"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -345,8 +358,10 @@ const ProjectsSection = () => {
                   onClick={scrollToTop}
                   className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300 group/link"
                 >
-                  <span className="text-sm sm:text-base font-medium">show details</span>
-                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+                  <span className="text-sm sm:text-base font-medium">{projectsText.showDetails}</span>
+                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">
+                    arrow_forward
+                  </span>
                 </Link>
               </div>
             </div>

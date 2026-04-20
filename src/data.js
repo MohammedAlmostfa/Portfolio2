@@ -3,30 +3,30 @@ export const projectsData = [{
     "name": "Educational Platform",
     "title": "Educational Platform",
     "category": "Course Management & Evaluation System",
-    "description": "An integrated educational platform that allows students to enroll in available courses and submit join requests. The admin approves requests through a dedicated dashboard. After login, students can view course details, track tasks assigned by the admin and change their status, watch uploaded videos and images, edit their personal information, and browse articles and books managed (add/delete) by the admin. The platform also includes a course rating system.",
+    "description": "An integrated educational platform that enables students to enroll in courses and submit join requests. The admin approves or rejects requests through a dedicated dashboard. After login, students can view course details, track assigned tasks with status updates, watch uploaded videos and images, edit their personal information, and explore articles and books managed by the admin. The platform includes a comprehensive course rating system.",
     "architecture": [{
         "title": "Student Enrollment & Request System",
-        "description": "Student submits a request to join a course; admin approves or rejects it via dashboard."
+        "description": "Students submit requests to join courses, which the admin reviews and approves or rejects via dashboard."
       },
       {
         "title": "Admin Dashboard",
-        "description": "Manage users, approve requests, upload/delete articles and books, and manage content."
+        "description": "Manage users, approve/reject enrollment requests, upload and delete educational content (articles and books)."
       },
       {
         "title": "Task Management",
-        "description": "Admin assigns tasks to students; student updates status (e.g., pending, completed)."
+        "description": "Admin assigns tasks to students; students track and update task status (e.g., pending, completed)."
       },
       {
         "title": "Media Viewing",
-        "description": "Watch videos and view images for each course."
+        "description": "Students access videos and images for each course."
       },
       {
         "title": "Rating System",
-        "description": "Course ratings submitted by students."
+        "description": "Students can rate and review completed courses."
       },
       {
-        "title": "Roles & Permissions (Spatie)",
-        "description": "Separate permissions for student, admin, and instructor."
+        "title": "Role-Based Access Control (Spatie)",
+        "description": "Granular permissions for students, instructors, and admins."
       }
     ],
     "techStack": ["Laravel", "MySQL", "JWT", "Spatie (Roles & Permissions)"],
@@ -34,72 +34,72 @@ export const projectsData = [{
         "src": "/Educational_platfom/Home_page.jpg",
         "alt": "Home Page",
         "title": "Home Page",
-        "description": "Displays the platform name, entry links, and login button. Scrolling down shows general information about the platform."
+        "description": "Platform landing page with entry links and login button. Scroll down for information about platform features."
       },
       {
         "src": "/Educational_platfom/Login_page.jpg",
         "alt": "Login Page",
-        "title": "Login Page",
-        "description": "User authentication page for students and admins."
+        "title": "User Login",
+        "description": "Secure authentication page for students and administrators."
       },
       {
         "src": "/Educational_platfom/courses_page.jpg",
         "alt": "Courses Page",
-        "title": "All Courses",
-        "description": "Browse all available courses on the platform."
+        "title": "Browse All Courses",
+        "description": "Explore all available courses on the platform."
       },
       {
         "src": "/Educational_platfom/Course_data_page.jpg",
         "alt": "Course Details Page",
-        "title": "Course Data",
-        "description": "Detailed view of a specific course including curriculum, media, and tasks."
+        "title": "Course Details",
+        "description": "Detailed course view including curriculum, media resources, and assigned tasks."
       },
       {
         "src": "/Educational_platfom/Course_Enrollmen_page.jpg",
         "alt": "Course Enrollment Page",
         "title": "Enrollment Request",
-        "description": "Form where students submit a request to join a course."
+        "description": "Form for students to submit course enrollment requests."
       },
       {
         "src": "/Educational_platfom/Course_rate_page.jpg",
         "alt": "Course Rating Page",
         "title": "Rate Course",
-        "description": "Students can submit ratings and reviews for completed courses."
+        "description": "Students submit ratings and reviews for completed courses."
       },
       {
         "src": "./Educational_platfom/User_data_page.jpg",
         "alt": "User Profile Page",
-        "title": "User Data",
-        "description": "Display user personal information and enrolled courses."
+        "title": "My Profile",
+        "description": "View personal information and enrolled courses."
       },
       {
         "src": "/Educational_platfom/User_Tasks_page.jpg",
         "alt": "User Tasks Page",
         "title": "My Tasks",
-        "description": "List of tasks assigned by admin; student can update task status."
+        "description": "List of assigned tasks with ability to update task status."
       },
       {
         "src": "/Educational_platfom/User_update_data_page.jpg",
         "alt": "Update User Data Page",
         "title": "Edit Profile",
-        "description": "Form for students to update their personal information."
+        "description": "Update personal information and account settings."
       },
       {
         "src": "/Educational_platfom/Articles_and_books_page.jpg",
         "alt": "Articles and Books Page",
-        "title": "Library",
-        "description": "Browse articles and books uploaded by admin."
+        "title": "Learning Library",
+        "description": "Browse educational articles and books uploaded by administrators."
       }
     ],
     "collaborators": [{
-        "name": "Jafar Dow ",
+        "name": "Jafar Dow",
         "linkedin": "https://www.linkedin.com/in/jafardaw?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-        "specialization": "Front-End Devloper",
+        "specialization": "Front-End Developer"
       },
       {
-        "name": "mohamad Issa",
-        'linkedin': "https://www.linkedin.com/in/mohamad-issa-b3a674329?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-        "specialization": "Front-End Devloper",
+        "name": "Mohamad Issa",
+        "linkedin": "https://www.linkedin.com/in/mohamad-issa-b3a674329?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+        "specialization": "Front-End Developer"
       }
     ]
   },
@@ -109,34 +109,33 @@ export const projectsData = [{
     "name": "Wasalni",
     "title": "Wasalni App",
     "category": "Ride-Sharing & Transportation System",
-    "description": "A ride-sharing platform that connects users with service providers through a mobile application. Users can browse available trips, book rides, and receive real-time updates. Service providers manage booking requests, while the admin oversees the system, approves providers, and manages users. The platform also supports favorites and push notifications for booking updates.",
+    "description": "A comprehensive ride-sharing platform connecting users with service providers through a mobile application. Users browse available trips, book rides, and receive real-time updates. Service providers manage booking requests efficiently, while administrators oversee the entire system, approve providers, and manage users. The platform supports favorites, in-app messaging, and push notifications for booking updates.",
     "architecture": [{
         "title": "Role-Based Access Control",
-        "description": "Three roles: user (browse and book trips), provider (accept/reject bookings), and admin (manage users and approve providers)."
+        "description": "Three user roles: users (browse and book trips), providers (accept/reject bookings), and admins (manage users and approve providers)."
       },
       {
         "title": "Trip Booking System",
-        "description": "Users can view available trips, book rides, and add trips or providers to favorites."
+        "description": "Users view available trips, book rides, and save trips or providers to favorites."
       },
       {
         "title": "Provider Management",
-        "description": "Service providers receive and manage booking requests (accept/reject)."
+        "description": "Service providers receive, manage, and respond to booking requests with accept/reject functionality."
       },
       {
         "title": "Admin Dashboard",
-        "description": "Admin manages users, approves providers, and monitors all trips in the system."
+        "description": "Administrators manage users, approve new providers, and monitor all system activities."
       },
       {
         "title": "Real-Time Notifications",
-        "description": "Push notifications using Firebase Cloud Messaging (FCM) for booking updates and system alerts."
+        "description": "Push notifications via Firebase Cloud Messaging (FCM) for booking updates and system alerts."
       },
       {
         "title": "API-First Design",
-        "description": "Laravel backend provides RESTful APIs for the Flutter mobile app with JWT authentication."
+        "description": "RESTful Laravel backend with JWT authentication for Flutter mobile app."
       }
     ],
     "techStack": ["Laravel", "MySQL", "JWT", "Firebase Cloud Messaging (FCM)"],
-
     "images": [{
         "src": "/Wasselni/Onboarding_page.jpg",
         "alt": "Onboarding Screen",
@@ -146,136 +145,132 @@ export const projectsData = [{
       {
         "src": "/Wasselni/Onboarding_page2.jpg",
         "alt": "Onboarding Screen 2",
-        "title": "Ride Sharing Explained",
-        "description": "Second onboarding screen highlighting ride-sharing features."
+        "title": "Ride-Sharing Features",
+        "description": "Second onboarding screen explaining key ride-sharing features."
       },
       {
         "src": "/Wasselni/Home_page.jpg",
         "alt": "Home Page",
-        "title": "Main Home Screen",
-        "description": "Displays available trips and main user options for browsing."
+        "title": "Main Dashboard",
+        "description": "Home screen displaying available trips and browsing options."
       },
       {
         "src": "/Wasselni/login_page.jpg",
         "alt": "Login Page",
-        "title": "User Login",
-        "description": "Authentication page for users, providers, and admin."
+        "title": "User Authentication",
+        "description": "Login page for users, providers, and administrators."
       },
       {
         "src": "/Wasselni/Trip_data_page.jpg",
         "alt": "Trip Details",
         "title": "Trip Information",
-        "description": "Detailed view of a specific trip including route, price, and driver."
+        "description": "Detailed trip view including route, price, and driver information."
       },
       {
         "src": "/Wasselni/confirm_booking_page.jpg",
         "alt": "Confirm Booking",
         "title": "Confirm Ride",
-        "description": "User confirms booking details before finalizing the ride request."
+        "description": "Booking confirmation page where users review details before finalizing."
       },
       {
         "src": "/Wasselni/Booking_successfully_page.jpg",
         "alt": "Booking Success",
         "title": "Booking Confirmed",
-        "description": "Success message after booking a ride with trip information."
+        "description": "Success confirmation with trip details and booking reference."
       },
       {
         "src": "/Wasselni/Dashboard_home_page.jpg",
         "alt": "Provider Dashboard Home",
         "title": "Provider Dashboard",
-        "description": "Service provider's main dashboard showing statistics and options."
+        "description": "Service provider's main dashboard showing statistics and management options."
       },
       {
         "src": "/Wasselni/Dashboard_bookeing_request_page.jpg",
         "alt": "Booking Requests",
-        "title": "Manage Booking Requests",
-        "description": "Provider views and manages incoming booking requests (accept/reject)."
+        "title": "Manage Requests",
+        "description": "Provider interface for viewing and managing incoming booking requests."
       },
       {
         "src": "/Wasselni/Dashoboard_Statistcs.jpg",
         "alt": "Statistics",
-        "title": "Dashboard Statistics",
-        "description": "Analytics and stats for trips, earnings, and user activity."
+        "title": "Performance Analytics",
+        "description": "Dashboard analytics showing trips, earnings, and user activity statistics."
       },
       {
         "src": "/Wasselni/Driver_Profile_Page.jpg",
         "alt": "Driver Profile",
         "title": "Driver Profile",
-        "description": "View driver details, rating, and contact information."
+        "description": "Driver profile displaying ratings, details, and contact information."
       },
       {
         "src": "/Wasselni/User_settings_page.jpg",
         "alt": "User Settings",
         "title": "Account Settings",
-        "description": "User can edit profile, change password, and manage preferences."
+        "description": "Settings page for profile editing, password changes, and preferences."
       }
     ],
     "collaborators": [{
         "name": "Sohaib Kamel",
         "linkedin": "https://www.linkedin.com/in/sohaib-kamel-863785347?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-        "specialization": "Flutter Devloper"
+        "specialization": "Flutter Developer"
       },
       {
-        "name": "Azeddine Miche ",
+        "name": "Azeddine Miche",
         "linkedin": "https://www.linkedin.com/in/azzeddinemiche1998?utm_source=share_via&utm_content=profile&utm_medium=member_android",
         "specialization": "UX/UI Designer"
       }
-
-
     ]
   },
+
   {
     "id": 3,
     "name": "Masari Al-Jamiya",
     "title": "Masari Al-Jamiya",
     "category": "University Admission Preference System",
-    "description": "A platform designed for Iraqi students to manage university admission preferences. It allows users to create an account, verify via admin, and filter universities by specialization, certificate level, and college type (scientific vs humanities). Users can rank their preferences using drag-and-drop, save selections, and download a PDF report. Admin manages announcements, news with images, and user verification. Firebase notifications keep users updated.",
+    "description": "A specialized platform for Iraqi students to streamline university admission preferences. Users create accounts, verify through admin, and filter universities by specialization, certificate level, and institution type. The drag-and-drop ranking system allows students to organize preferences, save selections, and generate PDF reports. Administrators manage announcements, news with images, and user verification. Firebase notifications keep users informed of important updates.",
     "architecture": [{
         "title": "User Registration & Verification",
-        "description": "User creates account, receives verification code from admin via WhatsApp contact button."
+        "description": "Students create accounts and receive verification codes from admin via WhatsApp contact."
       },
       {
-        "title": "Preference Management",
-        "description": "Users filter and rank university preferences using drag-and-drop interface, save and edit selections."
+        "title": "Advanced Filtering",
+        "description": "Filter universities by specialization, certificate level (diploma/degree), and institution type (scientific/humanities)."
+      },
+      {
+        "title": "Preference Ranking",
+        "description": "Intuitive drag-and-drop interface for ranking and organizing university preferences."
       },
       {
         "title": "Admin Content Management",
-        "description": "Admin posts, edits, and deletes news and explanatory articles with supporting images."
+        "description": "Administrators post, edit, and delete news and educational articles with image support."
       },
       {
         "title": "PDF Export",
-        "description": "Users can download their final preference list as a PDF file."
+        "description": "Generate and download final preference list as a PDF document."
       },
       {
         "title": "Real-Time Notifications",
-        "description": "Firebase Cloud Messaging (FCM) for updates on admission announcements and user actions."
-      },
-      {
-        "title": "Role-Based Access",
-        "description": "Two roles: regular user (manage preferences) and admin (manage content and verifications)."
+        "description": "Firebase Cloud Messaging (FCM) for admission announcements and system updates."
       }
     ],
     "techStack": ["Laravel", "MySQL", "JWT", "Firebase Cloud Messaging (FCM)", "PDF Generator"],
-
     "collaborators": [
-
       {
         "name": "Sohaib Kamel",
         "linkedin": "https://www.linkedin.com/in/sohaib-kamel-863785347?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-        "specialization": "Flutter Devloper"
+        "specialization": "Flutter Developer"
       },
       {
-        "name": "Azeddine Miche ",
+        "name": "Azeddine Miche",
         "linkedin": "https://www.linkedin.com/in/azzeddinemiche1998?utm_source=share_via&utm_content=profile&utm_medium=member_android",
         "specialization": "UX/UI Designer"
       }
-
     ],
     "images": [{
         "src": "/Masari_Al-Jamiya/Onboarding_Page.jpg",
         "alt": "Onboarding Screen",
-        "title": "Welcome Onboarding",
-        "description": "Introduction to the app for new users."
+        "title": "Welcome Introduction",
+        "description": "Introductory onboarding screen for new users."
       },
       {
         "src": "/Masari_Al-Jamiya/Login_Page.jpg",
@@ -287,13 +282,13 @@ export const projectsData = [{
         "src": "/Masari_Al-Jamiya/Creat_Accotn_Page.jpg",
         "alt": "Create Account",
         "title": "Account Registration",
-        "description": "New user registration form."
+        "description": "Registration form for new users."
       },
       {
         "src": "/Masari_Al-Jamiya/Account_Activation_Page.jpg",
         "alt": "Account Activation",
         "title": "Activate Account",
-        "description": "User enters verification code sent by admin."
+        "description": "Page for entering verification code sent by administrator."
       },
       {
         "src": "/Masari_Al-Jamiya/Verification_Accont.jpg",
@@ -305,43 +300,43 @@ export const projectsData = [{
         "src": "/Masari_Al-Jamiya/creat_proile_page.jpg",
         "alt": "Create Profile",
         "title": "Complete Profile",
-        "description": "User fills in personal and educational details."
+        "description": "Form for entering personal and educational information."
       },
       {
         "src": "/Masari_Al-Jamiya/Home_Page.jpg",
         "alt": "Home Page",
         "title": "Main Dashboard",
-        "description": "Home screen showing filters and university listings."
+        "description": "Home screen with filtering options and university listings."
       },
       {
         "src": "/Masari_Al-Jamiya/filering _in_home_page.jpg",
         "alt": "Filtering Options",
-        "title": "Filter Universities",
-        "description": "Filter by specialization, certificate, and college type."
+        "title": "University Filters",
+        "description": "Advanced filtering by specialization, certificate level, and institution type."
       },
       {
         "src": "/Masari_Al-Jamiya/resutl_of_filter_page.jpg",
         "alt": "Filter Results",
         "title": "Filtered Results",
-        "description": "List of universities matching the selected filters."
+        "description": "List of universities matching selected filter criteria."
       },
       {
         "src": "/Masari_Al-Jamiya/Saved_Page.jpg",
         "alt": "Saved Preferences",
-        "title": "My Saved Preferences",
-        "description": "User's ranked list of preferred universities with drag-and-drop reordering."
+        "title": "My Preferences",
+        "description": "Ranked list of preferred universities with drag-and-drop reordering."
       },
       {
         "src": "/Masari_Al-Jamiya/User_Profile.jpg",
         "alt": "User Profile",
         "title": "Profile Settings",
-        "description": "User can view and edit personal information."
+        "description": "View and edit personal information."
       },
       {
         "src": "/Masari_Al-Jamiya/News_Page.jpg",
         "alt": "News Page",
-        "title": "Announcements & News",
-        "description": "Admin-published news and explanatory posts with images."
+        "title": "News & Announcements",
+        "description": "Administrator-published news and educational posts with images."
       },
       {
         "src": "/Masari_Al-Jamiya/FAQ_Page.jpg",
@@ -351,59 +346,60 @@ export const projectsData = [{
       }
     ]
   },
+
   {
     "id": 4,
     "name": "Restaurant Reservation",
     "title": "Restaurant Reservation",
     "category": "Restaurant Booking Management System",
-    "description": "A backend system for managing restaurant table reservations. Users can browse available tables and submit reservation requests. The admin approves requests, and the client confirms the reservation upon receiving the payment. The system integrates Stripe for online payment processing and a Telegram bot for real-time notifications (reservation confirmations, payment receipts).",
+    "description": "A comprehensive backend system for managing restaurant table reservations. Customers browse available tables and submit reservation requests with preferred dates and times. The admin reviews and approves requests, and customers confirm reservations upon payment. The system integrates Stripe for secure online payments and a Telegram bot for automated notifications including confirmations, payment receipts, and status updates.",
     "architecture": [{
-        "title": "User Reservation",
-        "description": "Users browse restaurant tables and submit reservation requests with details (date, time, number of guests)."
+        "title": "Table Browsing & Reservation",
+        "description": "Users browse available restaurant tables and submit reservation requests with specific details (date, time, number of guests)."
       },
       {
-        "title": "Admin Approval",
-        "description": "Admin reviews and approves/rejects reservation requests."
-      },
-      {
-        "title": "Client Confirmation & Payment",
-        "description": "After admin approval, the client confirms the reservation and pays online via Stripe."
-      },
-      {
-        "title": "Telegram Notifications",
-        "description": "Automated notifications sent via Telegram bot for approval, payment confirmation, and reservation status updates."
+        "title": "Admin Approval Workflow",
+        "description": "Administrators review reservation requests and approve or reject them based on availability."
       },
       {
         "title": "Payment Processing",
-        "description": "Secure online payments integrated with Stripe API."
+        "description": "Secure online payment integration with Stripe for reservation confirmation."
+      },
+      {
+        "title": "Telegram Notifications",
+        "description": "Automated Telegram bot notifications for reservation confirmations, payment receipts, and status updates."
+      },
+      {
+        "title": "Reservation Management",
+        "description": "Full lifecycle management from request submission to final confirmation."
       }
     ],
     "techStack": ["Laravel", "MySQL", "JWT", "Stripe API", "Telegram Bot API"],
-
     "collaborators": [],
     "images": []
   },
+
   {
     "id": 5,
     "name": "vocaApp",
     "title": "vocaApp",
     "category": "Language Learning & Vocabulary Management",
-    "description": "A mobile app for saving and reviewing English vocabulary. Users can quickly add new words with translations, automatically organized by learning day. Includes spaced repetition system for effective review. Built as an MVP and continuously evolving. Tech stack: React + Capacitor + SQLite.",
+    "description": "A mobile application for efficient English vocabulary learning and retention. Users quickly add new words with translations, automatically organized by learning day. The app features a sophisticated spaced repetition system for scientifically-proven long-term retention. Built as an MVP with continuous evolution. Tech stack: React + Capacitor + SQLite for offline functionality.",
     "architecture": [{
         "title": "Word Management",
-        "description": "Add, edit, and delete words with translations. Automatic daily grouping."
+        "description": "Add, edit, and delete vocabulary entries with translations. Words are automatically organized by learning date."
       },
       {
         "title": "Spaced Repetition System",
-        "description": "Interactive review based on spaced repetition algorithm for long-term retention."
+        "description": "Interactive review mode based on spaced repetition algorithm optimizing long-term memory retention."
       },
       {
-        "title": "Full Vocabulary Review",
-        "description": "Review all saved words in one session."
+        "title": "Vocabulary Review",
+        "description": "Review all saved words in comprehensive study sessions."
       },
       {
-        "title": "Local Storage",
-        "description": "SQLite database for offline storage and fast access."
+        "title": "Offline Storage",
+        "description": "SQLite local database enabling offline access and fast performance."
       }
     ],
     "techStack": ["React", "Capacitor", "SQLite"],
@@ -412,186 +408,195 @@ export const projectsData = [{
         "src": "/VocaApp/Home_Page.jpg",
         "alt": "Home Page",
         "title": "Main Dashboard",
-        "description": "Home screen showing daily words and navigation to add new words or review."
+        "description": "Home screen showing daily words and navigation options."
       },
       {
         "src": "/VocaApp/Add_Word_page.jpg",
         "alt": "Add Word Page",
         "title": "Add New Word",
-        "description": "Form to add a new English word with its translation and optional notes."
+        "description": "Form for adding English words with translations and optional notes."
       },
       {
         "src": "/VocaApp/daily_Wod_page.jpg",
         "alt": "Daily Words Page",
         "title": "Daily Words",
-        "description": "List of words organized by the day they were added for easy review."
+        "description": "Words organized by learning date for easy daily review."
       },
       {
         "src": "/VocaApp/Spaced_Repetition_page.jpg",
         "alt": "Spaced Repetition Page",
         "title": "Spaced Repetition Review",
-        "description": "Interactive flashcards using spaced repetition algorithm to reinforce memory."
+        "description": "Interactive flashcard system using spaced repetition algorithm."
       }
     ]
   },
-
 
   {
     "id": 6,
     "name": "OBG Marketplace",
     "title": "OBG - Old but Gold",
     "category": "Used Tools & Equipment Marketplace",
-    "description": "OBG is a platform for buying and selling used tools and equipment. Users can list their items, browse other products, filter and search efficiently, and submit purchase requests. The app aims to provide a smooth, secure, and scalable experience. Built with Laravel backend and Flutter frontend, it includes secure file uploads, advanced role/permission management (Spatie), JWT authentication, and follows SOLID/DRY principles with Service & Repository patterns for high performance and scalability.",
+    "description": "OBG is a robust marketplace platform for buying and selling pre-owned tools and equipment. Users list items, browse products, apply advanced filters, and submit purchase requests seamlessly. The platform prioritizes user experience, security, and scalability. Built with Laravel backend and Flutter frontend, featuring secure file uploads, advanced role/permission management (Spatie), JWT authentication, and architectural best practices (SOLID/DRY principles) with Service & Repository patterns.",
     "architecture": [{
         "title": "Product Listing & Management",
-        "description": "Users can add used products with images and detailed descriptions."
+        "description": "Users create and manage product listings with detailed descriptions and multiple images."
       },
       {
-        "title": "Product Browsing & Filtering",
-        "description": "Efficient search and filter options for easy product discovery."
+        "title": "Advanced Search & Filtering",
+        "description": "Comprehensive filtering by category, price range, condition, and location for efficient product discovery."
       },
       {
-        "title": "Purchase Requests",
-        "description": "Users submit purchase requests; communication currently external (planned in-app messaging)."
+        "title": "Purchase Request System",
+        "description": "Users submit purchase requests with built-in communication features for negotiations."
       },
       {
         "title": "Secure File Uploads",
-        "description": "Safe handling of images and files."
+        "description": "Robust image and file handling with validation and security measures."
       },
       {
-        "title": "Role-Based Access Control (Spatie)",
-        "description": "Granular permissions for different user roles (buyer, seller, admin)."
+        "title": "Role-Based Permissions",
+        "description": "Granular access control using Spatie for buyers, sellers, and administrators."
       },
       {
-        "title": "Performance & Scalability",
-        "description": "Caching, indexing, Service & Repository pattern, SOLID principles, clean code."
+        "title": "Performance Optimization",
+        "description": "Redis caching, database indexing, Service & Repository pattern, and SOLID principles for scalability."
       },
       {
-        "title": "JWT Authentication",
-        "description": "Secure login and data protection using JSON Web Tokens."
+        "title": "Secure Authentication",
+        "description": "JWT-based authentication ensuring secure login and data protection."
       }
     ],
     "techStack": ["Laravel", "Flutter", "MySQL", "JWT", "Spatie (Roles & Permissions)"],
-    "collaborators": [],
+    "collaborators": [{
+        "name": "Moayyad Nagib",
+        "linkedin": "https://www.linkedin.com/in/moayyad-nagib-374151238?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+        "specialization": "Flutter Developer"
+      },
+      {
+        "name": "Azeddine Miche",
+        "linkedin": "https://www.linkedin.com/in/azzeddinemiche1998?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+        "specialization": "UX/UI Designer"
+      }
+    ],
     "images": [{
         "src": "/OBG-Marketplace/add%20rating%20english.jpg",
         "alt": "Add Rating English",
         "title": "Add Rating (English)",
-        "description": "Screen for adding a rating to a product in English."
+        "description": "Product rating submission interface in English."
       },
       {
         "src": "/OBG-Marketplace/add_rating.jpg",
         "alt": "Add Rating",
         "title": "Add Rating",
-        "description": "Add rating interface."
+        "description": "User rating interface for product reviews."
       },
       {
-        "src": "/OBG-Marketplace/buyer%20profilr%20with%20his%20items.jpg",
+        "src": "/OBG-Marketplace/buyer profilr with his items.jpg",
         "alt": "Buyer Profile with Items",
-        "title": "Buyer Profile",
-        "description": "Buyer profile displaying their listed items."
+        "title": "Seller Profile",
+        "description": "Seller profile displaying their active product listings."
       },
       {
         "src": "/OBG-Marketplace/buyer_profile.jpg",
         "alt": "Buyer Profile",
-        "title": "Buyer Profile",
-        "description": "Buyer profile overview."
+        "title": "User Profile",
+        "description": "User profile overview and settings."
       },
       {
         "src": "/OBG-Marketplace/cadd%20pessonall%20enformation.jpg",
         "alt": "Add Personal Information",
         "title": "Personal Information",
-        "description": "Form to add personal details."
+        "description": "Form for adding and editing personal details."
       },
       {
         "src": "/OBG-Marketplace/choose_langouge.jpg",
         "alt": "Choose Language",
         "title": "Language Selection",
-        "description": "Language selection screen."
+        "description": "Language preference selection screen."
       },
       {
         "src": "/OBG-Marketplace/choose_langouge_english.jpg",
         "alt": "Choose Language English",
         "title": "Language Selection (English)",
-        "description": "Language selection in English."
+        "description": "Language selection in English interface."
       },
       {
         "src": "/OBG-Marketplace/crear%20item%20to%20buy%203.jpg",
-        "alt": "Create Item to Buy 3",
+        "alt": "Create Listing Step 3",
         "title": "Create Listing",
-        "description": "Form to create a new product listing."
+        "description": "Final step of product listing creation."
       },
       {
         "src": "/OBG-Marketplace/creat%20iteam%20tp%20buy.jpg",
         "alt": "Create Item to Buy",
         "title": "Create Listing",
-        "description": "Create new item for sale."
+        "description": "Initial step for creating a new product listing."
       },
       {
         "src": "/OBG-Marketplace/creat%20item%20to%20buy%202.jpg",
-        "alt": "Create Item to Buy 2",
+        "alt": "Create Listing Step 2",
         "title": "Create Listing",
-        "description": "Create item listing (step 2)."
+        "description": "Second step of product listing creation."
       },
       {
         "src": "/OBG-Marketplace/creat%20item%20to%20buy%203.jpg",
         "alt": "Create Item to Buy 3",
         "title": "Create Listing",
-        "description": "Create item listing (step 3)."
+        "description": "Final step of product listing creation."
       },
       {
         "src": "/OBG-Marketplace/creat%20profile2.jpg",
-        "alt": "Create Profile 2",
+        "alt": "Create Profile Step 2",
         "title": "Create Profile",
-        "description": "Profile creation screen."
+        "description": "Second step of profile creation process."
       },
       {
         "src": "/OBG-Marketplace/creat%20profile3.jpg",
-        "alt": "Create Profile 3",
-        "title": "Create Profile",
-        "description": "Profile creation additional step."
+        "alt": "Create Profile Step 3",
+        "title": "Complete Profile",
+        "description": "Final profile creation step."
       },
       {
         "src": "/OBG-Marketplace/error_page.jpg",
         "alt": "Error Page",
         "title": "Error Page",
-        "description": "Generic error page."
+        "description": "Standard error handling display."
       },
       {
         "src": "/OBG-Marketplace/Favorites.jpg",
         "alt": "Favorites",
-        "title": "Favorites",
-        "description": "User's favorite items list."
+        "title": "Saved Items",
+        "description": "User's collection of saved and favorite items."
       },
       {
         "src": "/OBG-Marketplace/fitering%20page%20of%20item.jpg",
         "alt": "Filtering Page",
-        "title": "Filter Items",
-        "description": "Product filtering and search page."
+        "title": "Product Filters",
+        "description": "Advanced filtering and search interface."
       },
       {
         "src": "/OBG-Marketplace/forgate%20password.jpg",
         "alt": "Forgot Password",
-        "title": "Forgot Password",
+        "title": "Password Recovery",
         "description": "Password reset request screen."
       },
       {
         "src": "/OBG-Marketplace/home%20page%20english.jpg",
         "alt": "Home Page English",
-        "title": "Home Page (English)",
-        "description": "Main home screen in English."
+        "title": "Home (English)",
+        "description": "Main homepage in English interface."
       },
       {
         "src": "/OBG-Marketplace/home%20page.jpg",
         "alt": "Home Page",
         "title": "Home Page",
-        "description": "Main home screen."
+        "description": "Primary home screen with featured products."
       },
       {
         "src": "/OBG-Marketplace/home%20page2.jpg",
-        "alt": "Home Page 2",
-        "title": "Home Page",
-        "description": "Alternate home screen view."
+        "alt": "Home Page Alternate",
+        "title": "Home Alternate View",
+        "description": "Alternative home screen layout."
       },
       {
         "src": "/OBG-Marketplace/Home_page.jpg",
@@ -601,224 +606,215 @@ export const projectsData = [{
       },
       {
         "src": "/OBG-Marketplace/item%20data.jpg",
-        "alt": "Item Data",
-        "title": "Item Details",
-        "description": "Detailed view of a single item."
+        "alt": "Item Details",
+        "title": "Product Details",
+        "description": "Comprehensive product information page."
       },
       {
         "src": "/OBG-Marketplace/items%20raview%20and%20similer%20items.jpg",
-        "alt": "Item Reviews and Similar Items",
-        "title": "Reviews & Similar",
-        "description": "Item reviews and similar product suggestions."
+        "alt": "Reviews & Similar",
+        "title": "Reviews & Recommendations",
+        "description": "Product reviews and similar item suggestions."
       },
       {
         "src": "/OBG-Marketplace/item_phpto.jpg",
         "alt": "Item Photo",
-        "title": "Item Photo",
-        "description": "Item image viewer."
+        "title": "Product Gallery",
+        "description": "Product image viewer and gallery."
       },
       {
         "src": "/OBG-Marketplace/last_prist_off_items.jpg",
-        "alt": "Last Price of Items",
-        "title": "Latest Prices",
-        "description": "Display of recent item prices."
+        "alt": "Latest Prices",
+        "title": "Recent Prices",
+        "description": "Display of recently listed item prices."
       },
       {
         "src": "/OBG-Marketplace/login.jpg",
         "alt": "Login",
-        "title": "Login",
-        "description": "Login screen."
+        "title": "Login Screen",
+        "description": "User authentication login interface."
       },
       {
         "src": "/OBG-Marketplace/log_in.jpg",
         "alt": "Log In",
-        "title": "Log In",
-        "description": "Alternative login screen."
+        "title": "Sign In",
+        "description": "Alternative login interface."
       },
       {
         "src": "/OBG-Marketplace/lowest%20price%20english.jpg",
-        "alt": "Lowest Price English",
-        "title": "Lowest Price",
-        "description": "Filter by lowest price (English)."
+        "alt": "Lowest Price Filter",
+        "title": "Price Filter (English)",
+        "description": "Filter products by lowest price in English."
       },
       {
         "src": "/OBG-Marketplace/on%20boarding2.jpg",
         "alt": "Onboarding 2",
         "title": "Onboarding Screen 2",
-        "description": "Second onboarding screen."
+        "description": "Second introductory onboarding screen."
       },
       {
         "src": "/OBG-Marketplace/onboarding1.jpg",
         "alt": "Onboarding 1",
         "title": "Onboarding Screen 1",
-        "description": "First onboarding screen."
+        "description": "First introductory onboarding screen."
       },
       {
         "src": "/OBG-Marketplace/onboarding3.jpg",
         "alt": "Onboarding 3",
         "title": "Onboarding Screen 3",
-        "description": "Third onboarding screen."
+        "description": "Third introductory onboarding screen."
       },
       {
         "src": "/OBG-Marketplace/pick%20your%20location%20with%20map.jpg",
-        "alt": "Pick Location with Map",
-        "title": "Location Picker",
-        "description": "Map-based location selection."
+        "alt": "Location Picker",
+        "title": "Location Selection",
+        "description": "Map-based location picker for listings."
       },
       {
         "src": "/OBG-Marketplace/saved%20posts.jpg",
         "alt": "Saved Posts",
-        "title": "Saved Posts",
-        "description": "User's saved posts."
+        "title": "Saved Items",
+        "description": "User's collection of saved listings."
       },
       {
         "src": "/OBG-Marketplace/seeting%20english.jpg",
         "alt": "Settings English",
         "title": "Settings (English)",
-        "description": "Settings screen in English."
+        "description": "Application settings in English."
       },
       {
         "src": "/OBG-Marketplace/settings.jpg",
         "alt": "Settings",
         "title": "Settings",
-        "description": "Settings screen."
+        "description": "Application preferences and settings."
       },
       {
         "src": "/OBG-Marketplace/sign%20up.jpg",
         "alt": "Sign Up",
-        "title": "Sign Up",
-        "description": "Registration screen."
+        "title": "Registration",
+        "description": "User registration/signup form."
       },
       {
         "src": "/OBG-Marketplace/stat%20or%20login%20page.jpg",
         "alt": "Start or Login Page",
-        "title": "Start / Login",
-        "description": "Entry screen with start or login options."
-      }
-
-
-
-    ],
-    "collaborators": [{
-
-        "name": "Moayyad Nagib",
-        "linkedin": "https://www.linkedin.com/in/moayyad-nagib-374151238?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-        "specialization": "Flutter Devloper"
-      },
-      {
-        "name": "Azeddine Miche ",
-        "linkedin": "https://www.linkedin.com/in/azzeddinemiche1998?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-        "specialization": "UX/UI Designer"
+        "title": "Welcome Screen",
+        "description": "Entry screen with registration or login options."
       }
     ]
   },
 
-
   {
-    id: "7",
-    name: "Statistics ERP",
-    title: "Statistics ERP",
-    category: "Enterprise Resource Planning",
-    description: "A comprehensive enterprise resource planning system managing sales operations, inventory, and financial transactions with advanced reporting and installment tracking.",
-    images: [{
-        src: "/Statistics/login.jpg",
-        alt: "Login Page",
-        title: "Login Page",
-        description: "Secure authentication page for admins and accountants."
+    "id": 7,
+    "name": "Statistics ERP",
+    "title": "Statistics ERP",
+    "category": "Enterprise Resource Planning",
+    "description": "A comprehensive Enterprise Resource Planning (ERP) system for managing sales operations, inventory management, and financial transactions. Features advanced reporting capabilities and installment payment tracking. The system provides administrators and accountants with powerful tools for managing customers, products, invoices, agents, and financial transactions with complete audit trails.",
+    "architecture": [{
+        "title": "MVC Architecture",
+        "description": "Laravel-based Model-View-Controller architecture with dedicated service layer for business logic."
       },
       {
-        src: "/Statistics/home page.jpg",
-        alt: "Home Dashboard",
-        title: "Home Dashboard",
-        description: "Main dashboard showing key metrics and recent activities."
+        "title": "Event-Driven System",
+        "description": "Inventory updates and notifications handled through event listeners."
       },
       {
-        src: "/Statistics/creat_invoice.jpg",
-        alt: "Create Invoice",
-        title: "Create Invoice",
-        description: "Interface for creating new sales invoices."
+        "title": "Queue Processing",
+        "description": "Background job processing for WhatsApp notifications and report generation."
       },
       {
-        src: "/Statistics/creaat invoice 2.jpg",
-        alt: "Create Invoice Step 2",
-        title: "Create Invoice - Products",
-        description: "Adding products to the invoice."
+        "title": "JWT Authentication",
+        "description": "Stateless token-based authentication for API security."
       },
       {
-        src: "/Statistics/get all customer.jpg",
-        alt: "Customers List",
-        title: "Customers Management",
-        description: "View and manage all registered customers."
+        "title": "Sales & Invoicing",
+        "description": "Complete invoice management, payment tracking, and installment system."
       },
       {
-        src: "/Statistics/get customer with his product in invoicce.jpg",
-        alt: "Customer Invoice Details",
-        title: "Customer Invoice History",
-        description: "View all invoices and products for a specific customer."
-      },
-      {
-        src: "/Statistics/get all product.jpg",
-        alt: "Products List",
-        title: "Products Management",
-        description: "Manage product inventory, prices, and categories."
-      },
-      {
-        src: "/Statistics/print all product.jpg",
-        alt: "Print Products",
-        title: "Print Product Catalog",
-        description: "Generate printable product catalog."
-      },
-      {
-        src: "/Statistics/get all agent.jpg",
-        alt: "Agents List",
-        title: "Agents Management",
-        description: "Manage supplier agents and their transactions."
-      },
-      {
-        src: "/Statistics/get all agent with receipt.jpg",
-        alt: "Agent Receipts",
-        title: "Agent Receipts",
-        description: "View financial receipts for each agent."
-      },
-      {
-        src: "/Statistics/activite log.jpg",
-        alt: "Activity Log",
-        title: "Activity Log",
-        description: "System audit trail showing all user actions."
-      },
-      {
-        src: "/Statistics/IMG-20260420-WA0033.jpg",
-        alt: "Additional Screenshot",
-        title: "System Interface",
-        description: "Additional interface screenshot."
+        "title": "Comprehensive Reporting",
+        "description": "Advanced analytics and reporting for sales, inventory, and financial performance."
       }
     ],
-    techStack: ["Laravel", "MySQL", "JWT", "WhatsApp API", "Queue Workers"],
-    sourceLink: "https://github.com/MohammedAlmostfa/Statistics-App",
-    architecture: [{
-        title: "MVC Pattern",
-        description: "Laravel-based MVC architecture with service layer for business logic."
+    "techStack": ["Laravel", "MySQL", "JWT", "WhatsApp API", "Queue Workers"],
+    "images": [{
+        "src": "/Statistics/login.jpg",
+        "alt": "Login Page",
+        "title": "Admin Login",
+        "description": "Secure authentication page for administrators and accountants."
       },
       {
-        title: "Event-Driven",
-        description: "Inventory updates and notifications handled via events and listeners."
+        "src": "/Statistics/home page.jpg",
+        "alt": "Home Dashboard",
+        "title": "Dashboard",
+        "description": "Main dashboard displaying key metrics and recent activities."
       },
       {
-        title: "Queue System",
-        description: "Background processing for WhatsApp notifications and report generation."
+        "src": "/Statistics/creat_invoice.jpg",
+        "alt": "Create Invoice",
+        "title": "Create Invoice",
+        "description": "Interface for creating new sales invoices."
       },
       {
-        title: "JWT Authentication",
-        description: "Stateless authentication for API security."
+        "src": "/Statistics/creaat invoice 2.jpg",
+        "alt": "Create Invoice Step 2",
+        "title": "Add Products to Invoice",
+        "description": "Product selection and addition to invoice."
+      },
+      {
+        "src": "/Statistics/get all customer.jpg",
+        "alt": "Customers List",
+        "title": "Customer Management",
+        "description": "View and manage all registered customers."
+      },
+      {
+        "src": "/Statistics/get customer with his product in invoicce.jpg",
+        "alt": "Customer Invoice Details",
+        "title": "Customer Invoice History",
+        "description": "View all invoices and products associated with specific customer."
+      },
+      {
+        "src": "/Statistics/get all product.jpg",
+        "alt": "Products List",
+        "title": "Product Management",
+        "description": "Manage product inventory, pricing, and categories."
+      },
+      {
+        "src": "/Statistics/print all product.jpg",
+        "alt": "Print Products",
+        "title": "Print Catalog",
+        "description": "Generate printable product catalog for distribution."
+      },
+      {
+        "src": "/Statistics/get all agent.jpg",
+        "alt": "Agents List",
+        "title": "Agent Management",
+        "description": "Manage supplier agents and their transactions."
+      },
+      {
+        "src": "/Statistics/get all agent with receipt.jpg",
+        "alt": "Agent Receipts",
+        "title": "Financial Receipts",
+        "description": "View financial receipts and transactions for each agent."
+      },
+      {
+        "src": "/Statistics/activite log.jpg",
+        "alt": "Activity Log",
+        "title": "System Audit Trail",
+        "description": "Complete system activity log tracking all user actions."
+      },
+      {
+        "src": "/Statistics/IMG-20260420-WA0033.jpg",
+        "alt": "Additional Screenshot",
+        "title": "System Interface",
+        "description": "Additional system interface screenshot."
       }
     ],
     "collaborators": [{
         "name": "Sohaib Kamel",
         "linkedin": "https://www.linkedin.com/in/sohaib-kamel-863785347?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-        "specialization": "Flutter Devloper"
+        "specialization": "Flutter Developer"
       },
       {
-        "name": "Azeddine Miche ",
+        "name": "Azeddine Miche",
         "linkedin": "https://www.linkedin.com/in/azzeddinemiche1998?utm_source=share_via&utm_content=profile&utm_medium=member_android",
         "specialization": "UX/UI Designer"
       }
@@ -831,42 +827,42 @@ export const expertiseData = [{
     title: "Backend Development",
     icon: "php",
     color: "primary",
-    desc: "Building monolithic and microservices architectures using Laravel and PHP with a focus on domain-driven design."
+    desc: "Building monolithic and microservices architectures using Laravel and PHP with focus on domain-driven design principles."
   },
   {
     id: 2,
     title: "REST APIs",
     icon: "api",
     color: "secondary",
-    desc: "Designing and documenting comprehensive, versioned API endpoints for web and mobile clients."
+    desc: "Designing and documenting comprehensive, versioned API endpoints for web and mobile applications."
   },
   {
     id: 3,
     title: "Database Optimization",
     icon: "database",
     color: "tertiary",
-    desc: "Refining complex SQL queries, indexing strategies, and relational data modeling for MySQL."
+    desc: "Refining complex SQL queries, implementing indexing strategies, and optimizing relational data models in MySQL."
   },
   {
     id: 4,
-    title: "Real-time Systems",
+    title: "Real-Time Systems",
     icon: "sync",
     color: "primary-container",
     desc: "Implementing WebSockets and event-driven communication for live tracking and instant notifications."
   },
   {
     id: 5,
-    title: "Performance",
+    title: "Performance Optimization",
     icon: "bolt",
     color: "secondary-container",
-    desc: "Integrating Redis caching and background job processing to handle heavy computational loads."
+    desc: "Integrating Redis caching and background job processing to handle heavy computational loads efficiently."
   },
   {
     id: 6,
-    title: "DevOps",
+    title: "DevOps & Cloud",
     icon: "cloud_done",
     color: "outline",
-    desc: "Managing CI/CD pipelines, Docker containers, and cloud deployment for consistent production environments."
+    desc: "Managing CI/CD pipelines, Docker containerization, and cloud deployment for consistent production environments."
   }
 ];
 
@@ -874,6 +870,7 @@ export const techStackData = {
   Backend: ["PHP", "Laravel"],
   Databases: ["MySQL"],
   DevOps: ["Git", "Docker", "CI/CD"],
-  Frontend: ["HTML/CSS/JS", "Bootstrap", "React"],
-  Languages: ["C++", "Java", "Python"]
+  Frontend: ["HTML", "CSS", "JavaScript", "Bootstrap", "React", "Flutter"],
+  Languages: ["C++", "Java", "Python"],
+  Tools: ["JWT", "Firebase Cloud Messaging", "Stripe API", "Telegram Bot API", "Spatie"]
 };

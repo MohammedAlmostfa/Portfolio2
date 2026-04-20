@@ -1,7 +1,9 @@
+// src/components/sections/DevNestSection.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import devnestLogo from '../../assets/devnestlogo.webp';
 import { fadeInUp, staggerContainer, itemVariants, scaleOnHover, imageScale } from '../../animations/variants';
+import { devnestText, stats, tags, imageConfig } from '../../data/devnestData';
 
 const DevNestSection = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -29,7 +31,7 @@ const DevNestSection = () => {
           variants={fadeInUp}
           className="devnest-container bg-surface-container-low rounded-2xl sm:rounded-[2rem] md:rounded-[3rem] p-6 sm:p-12 md:p-20 border border-primary/40 flex flex-col md:flex-row items-center gap-8 md:gap-16"
         >
-          {/* العمود الأيسر (النص) - بدون تغيير */}
+          {/* العمود الأيسر (النص) */}
           <motion.div
             className="devnest-content flex-1 space-y-6 sm:space-y-8 relative ml-2 sm:ml-4 pl-6 sm:pl-12"
             variants={staggerContainer}
@@ -38,42 +40,40 @@ const DevNestSection = () => {
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tight"
             >
-              Co-Founder @ <span className="text-primary">DevNest</span>
+              {devnestText.titlePrefix}{' '}
+              <span className="text-primary">{devnestText.titleHighlight}</span>
             </motion.h2>
             
             <motion.p
               variants={itemVariants}
               className="text-base sm:text-lg md:text-xl text-on-surface-variant"
             >
-              Leading a team of elite developers to create custom digital solutions. From specialized
-              ERP systems to consumer-facing mobile apps, we engineering excellence.
+              {devnestText.description}
             </motion.p>
             
             <motion.div
               variants={itemVariants}
               className="grid grid-cols-2 gap-6 sm:gap-8"
             >
-              <motion.div
-                whileHover={{ scale: 1.05, y: -3 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-              >
-                <div className="text-2xl sm:text-3xl font-bold text-white">15+</div>
-                <div className="text-xs sm:text-sm font-label text-on-surface-variant uppercase">Projects Delivered</div>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05, y: -3 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-              >
-                <div className="text-2xl sm:text-3xl font-bold text-white">98%</div>
-                <div className="text-xs sm:text-sm font-label text-on-surface-variant uppercase">Client Satisfaction</div>
-              </motion.div>
+              {stats.map((stat, idx) => (
+                <motion.div
+                  key={idx}
+                  whileHover={{ scale: 1.05, y: -3 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  <div className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</div>
+                  <div className="text-xs sm:text-sm font-label text-on-surface-variant uppercase">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
             </motion.div>
             
             <motion.div
               variants={itemVariants}
               className="flex flex-wrap gap-3 sm:gap-4"
             >
-              {['Web Platforms', 'ERP Systems', 'Mobile Apps'].map((tag, idx) => (
+              {tags.map((tag, idx) => (
                 <motion.span
                   key={idx}
                   className="px-3 sm:px-4 py-2 bg-surface-container rounded-full text-xs sm:text-sm font-semibold"
@@ -100,18 +100,16 @@ const DevNestSection = () => {
                     transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
                     className="w-12 h-12 border-4 border-primary-container border-t-transparent rounded-full"
                   />
-                  <p className="text-primary text-sm mt-3">Loading logo...</p>
+                  <p className="text-primary text-sm mt-3">{devnestText.loadingText}</p>
                 </div>
               )}
 
               {/* الصورة مع تأثير Fade-in بعد التحميل */}
               <motion.img
                 src={devnestLogo}
-                alt="DevNest Logo"
-                className={`w-full h-full object-contain ${
-                  imageLoaded ? 'opacity-100' : 'opacity-0'
-                }`}
-                whileHover={{ scale: 1.15, rotate: 5 }}
+                alt={imageConfig.alt}
+                className={imageConfig.className + (imageLoaded ? ' opacity-100' : ' opacity-0')}
+                whileHover={{ scale: imageConfig.hoverScale, rotate: imageConfig.hoverRotate }}
                 transition={{ type: 'spring', stiffness: 200, damping: 10 }}
                 onLoad={() => setImageLoaded(true)}
                 onError={() => {
@@ -124,7 +122,7 @@ const DevNestSection = () => {
               {imageError && (
                 <div className="absolute inset-0 flex items-center justify-center bg-surface-container-low text-red-400 rounded-3xl z-10">
                   <span className="material-symbols-outlined text-4xl mr-2">error</span>
-                  Failed to load logo
+                  {devnestText.errorText}
                 </div>
               )}
 
