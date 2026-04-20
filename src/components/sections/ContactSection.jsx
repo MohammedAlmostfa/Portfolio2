@@ -8,49 +8,44 @@ const ContactSection = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setStatus('sending');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
 
-  // تجهيز البيانات التي سيتم إرسالها
-  // المفتاح '_subject' يستخدم لتحديد عنوان البريد الإلكتروني الذي ستستقبله
-  const payload = {
-    name: formData.name,
-    email: formData.email,
-    subject: formData.subject,
-    message: formData.message,
-    _subject: `رسالة جديدة من ${formData.name} عبر موقع portfolio`,
-  };
+    const payload = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      _subject: `رسالة جديدة من ${formData.name} عبر موقع portfolio`,
+    };
 
-  try {
-    // إرسال البيانات إلى نقطة نهاية FormSubmit API الخاصة بك
-    const response = await fetch('https://formsubmit.co/ajax/mohammedalmostfa36@gmail.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-    const result = await response.json();
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/mohammedalmostfa36@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
 
-    if (result.success) {
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } else {
+      if (result.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
       setStatus('error');
     }
-  } catch (error) {
-    setStatus('error');
-  }
-  setTimeout(() => setStatus(''), 3000);
-};
+    setTimeout(() => setStatus(''), 3000);
+  };
 
   return (
     <section className="py-16 sm:py-24 md:py-32 bg-surface-container-low" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
-          {/* العمود الأيسر - نفس القيم اليسارية مثل الأقسام الأخرى */}
-          <div className="relative ml-2 sm:ml-4 pl-6 sm:pl-12">
-            {/* النقطة الزرقاء المرجعية */}
-           
+          {/* العمود الأيسر - بدون هوامز إضافية (مثل AboutSection) */}
+          <div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline mb-6 sm:mb-8">
               Let's build something <span className="text-primary">extraordinary</span>
             </h2>
@@ -102,7 +97,7 @@ const handleSubmit = async (e) => {
             </div>
           </div>
 
-          {/* العمود الأيمن - نموذج الاتصال (تمت إضافته ليكتمل التصميم) */}
+          {/* العمود الأيمن - نموذج الاتصال */}
           <div className="bg-surface-container-high rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-outline-variant/20">
             <h3 className="text-2xl sm:text-3xl font-bold mb-6">Send me a message</h3>
             <form onSubmit={handleSubmit} className="space-y-5">

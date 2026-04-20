@@ -6,7 +6,7 @@ const DevNestSection = () => {
     <section className="py-16 sm:py-24 md:py-32 relative overflow-hidden" id="devnest">
       <div className="absolute inset-0 logic-gradient opacity-5"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
-        <div className="devnest-container bg-surface-container-low rounded-2xl sm:rounded-[2rem] md:rounded-[3rem] p-6 sm:p-12 md:p-20 border border-outline-variant/20 flex items-center gap-8 md:gap-16">
+        <div className="devnest-container bg-surface-container-low rounded-2xl sm:rounded-[2rem] md:rounded-[3rem] p-6 sm:p-12 md:p-20 border border-primary/40 flex items-center gap-8 md:gap-16">
           {/* العمود الأيسر (النص) - تم إضافة نفس القيم اليسارية */}
           <div className="devnest-content flex-1 space-y-6 sm:space-y-8 relative ml-2 sm:ml-4 pl-6 sm:pl-12">
             {/* النقطة الزرقاء المرجعية (للمحاذاة مع باقي الأقسام) */}

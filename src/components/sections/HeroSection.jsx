@@ -13,14 +13,12 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-24 sm:pt-20 overflow-hidden px-4 sm:px-0">
+    <section className="relative min-h-screen flex items-center pt-24 sm:pt-20 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(0,217,255,0.08)_0%,_rgba(11,19,38,1)_70%)]"></div>
-      <div className="max-w-7xl mx-auto w-full relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full relative z-10">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* العمود الأيسر - تم إضافة نفس القيم اليسارية من ExperienceSection */}
-          <div className="relative ml-2 sm:ml-4 pl-6 sm:pl-12">
-            {/* نفس النقطة الزرقاء العلوية (اختياري، لجعل المظهر متطابقاً) */}
-          
+          {/* العمود الأيسر - نفس هيكل AboutSection (بدون هوامش إضافية) */}
+          <div className="relative">
             <div className="space-y-6 sm:space-y-8">
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 gap-2">
                 <span className="relative flex h-2 w-2">
