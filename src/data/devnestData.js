@@ -12,7 +12,7 @@ export const devnestText = {
 
 // إحصائيات المشروع
 export const stats = [
-  { value: "15+", label: "Projects Delivered" },
+  { value: "2+", label: "Projects Delivered" },
   { value: "98%", label: "Client Satisfaction" },
 ];
 
