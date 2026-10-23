@@ -15,8 +15,8 @@ import { heroText, stats, cvLink } from '../../data/heroData';
 // الشارات على أطراف المربع، متوسّطة عمودياً على الحافة
 const floatingChips = [
   { label: 'Laravel',   icon: 'code',   position: 'top-[15%] left-0 -translate-x-1/4',    delay: 0 },
-  { label: 'React',     icon: 'web',    position: 'top-[40%] right-0 translate-x-1/4',    delay: 0.8 },
-  { label: 'DevSecOps', icon: 'shield', position: 'bottom-[18%] left-0 -translate-x-1/4', delay: 1.6 },
+  { label: 'Anguler',     icon: 'web',    position: 'top-[40%] right-0 translate-x-1/4',    delay: 0.8 },
+  { label: 'Full-stack', icon: 'shield', position: 'bottom-[18%] left-0 -translate-x-1/4', delay: 1.6 },
 ];
 
 // تلاشي أسفل الصورة بالـ mask (بدل طبقة بلون صلب) عشان الخلفية المتحركة تبقى ظاهرة
@@ -152,14 +152,14 @@ const HeroSection = () => {
               />
 
               {/* 2) صورتك مع تلاشي سفلي بالـ mask */}
-              <motion.img
-                variants={blurIn}
-                src={myPhoto}
-                alt={heroText.imageAlt}
-                draggable={false}
-                style={{ maskImage: photoFade, WebkitMaskImage: photoFade }}
-                className="absolute bottom-0 left-4 h-full w-[calc(100%-2rem)] object-contain object-bottom select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
-              />
+         <motion.img
+  variants={blurIn}
+  src={myPhoto}
+  alt={heroText.imageAlt}
+  draggable={false}
+  style={{ maskImage: photoFade, WebkitMaskImage: photoFade }}
+  className="absolute bottom-0 left-0 h-full w-full object-contain object-bottom select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] scale-[1.35] origin-bottom md:scale-110"
+/>
 
               {/* 3) الشارات على الأطراف */}
               {floatingChips.map(({ label, icon, position, delay }) => (
