@@ -6,10 +6,7 @@ import { aboutCards, contactInfo, aboutText } from '../../data/aboutData';
 
 const AboutSection = () => {
   return (
-    <section
-      className="py-16 sm:py-24 md:py-32 bg-surface-container-low"
-      id="about"
-    >
+    <section className="py-16 sm:py-24 md:py-32" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 grid md:grid-cols-2 gap-12 md:gap-24 items-center">
         {/* العمود الأيسر - النصوص والمعلومات */}
         <motion.div
@@ -102,7 +99,7 @@ const AboutSection = () => {
                 },
               }}
               whileHover="hover"
-              className={`aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center p-4 sm:p-8 text-center hover:bg-surface-container-high transition-colors ${
+              className={`aspect-square glass-panel bg-surface-container/50 rounded-2xl flex flex-col items-center justify-center p-4 sm:p-8 text-center hover:bg-surface-container-high/60 transition-colors ${
                 card.mt ? 'mt-6 sm:mt-12' : ''
               }`}
             >

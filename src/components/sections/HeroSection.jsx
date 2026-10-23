@@ -19,6 +19,9 @@ const floatingChips = [
   { label: 'DevSecOps', icon: 'shield', position: 'bottom-[18%] left-0 -translate-x-1/4', delay: 1.6 },
 ];
 
+// تلاشي أسفل الصورة بالـ mask (بدل طبقة بلون صلب) عشان الخلفية المتحركة تبقى ظاهرة
+const photoFade = 'linear-gradient(to top, transparent 0, #000 4rem)';
+
 const HeroSection = () => {
   const scrollTo = (selector) => (e) => {
     e.preventDefault();
@@ -29,14 +32,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center pt-24 sm:pt-20 overflow-hidden">
-      {/* الخلفية */}
-      <motion.div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(0,217,255,0.08)_0%,_rgba(11,19,38,1)_70%)]"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-      />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full relative z-10">
         <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           {/* ========== العمود الأيسر ========== */}
@@ -51,7 +46,7 @@ const HeroSection = () => {
               {/* الشارة */}
               <motion.div
                 variants={fadeInUp}
-                className="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 gap-2"
+                className="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-high/60 backdrop-blur-md border border-outline-variant/30 gap-2"
               >
                 <span className="relative flex h-2 w-2">
                   <motion.span
@@ -103,7 +98,7 @@ const HeroSection = () => {
                 </motion.button>
                 <motion.button
                   onClick={scrollTo('#projects')}
-                  className="px-6 sm:px-8 py-3 sm:py-4 border border-outline-variant/30 rounded-xl font-bold hover:bg-surface-container transition-colors text-center text-sm sm:text-base"
+                  className="px-6 sm:px-8 py-3 sm:py-4 border border-outline-variant/30 rounded-xl font-bold bg-surface-container/30 backdrop-blur-md hover:bg-surface-container/60 transition-colors text-center text-sm sm:text-base"
                   {...scaleOnHover}
                 >
                   {heroText.buttonWork}
@@ -156,19 +151,17 @@ const HeroSection = () => {
                 className="absolute inset-x-8 bottom-0 top-10 rounded-full bg-primary-container/20 blur-3xl"
               />
 
-              {/* 2) صورتك: بنص المربع بالضبط (بدون translate) */}
+              {/* 2) صورتك مع تلاشي سفلي بالـ mask */}
               <motion.img
                 variants={blurIn}
                 src={myPhoto}
                 alt={heroText.imageAlt}
                 draggable={false}
+                style={{ maskImage: photoFade, WebkitMaskImage: photoFade }}
                 className="absolute bottom-0 left-4 h-full w-[calc(100%-2rem)] object-contain object-bottom select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
               />
 
-              {/* 3) تلاشي من تحت */}
-              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[rgba(11,19,38,1)] to-transparent pointer-events-none" />
-
-              {/* 4) الشارات على الأطراف */}
+              {/* 3) الشارات على الأطراف */}
               {floatingChips.map(({ label, icon, position, delay }) => (
                 <motion.div
                   key={label}
@@ -178,7 +171,7 @@ const HeroSection = () => {
                   <motion.div
                     animate={{ y: [0, -10, 0] }}
                     transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut', delay }}
-                    className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/30 shadow-lg"
+                    className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl bg-surface-container-high/60 backdrop-blur-md border border-outline-variant/30 shadow-lg"
                   >
                     <span className="material-symbols-outlined text-primary text-base sm:text-lg">
                       {icon}

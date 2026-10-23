@@ -46,7 +46,7 @@ const ExpertiseSection = () => {
               key={idx}
               variants={cardVariants}
               {...liftOnHover}
-              className={`p-6 sm:p-8 bg-surface-container border-l-4 ${borderColorMap[item.colorKey]} transition-all hover:bg-surface-container-high group`}
+              className={`p-6 sm:p-8 bg-surface-container/50 backdrop-blur-xl border-l-4 ${borderColorMap[item.colorKey]} transition-all hover:bg-surface-container-high/60 group`}
             >
               <motion.span
                 className={`material-symbols-outlined text-3xl sm:text-4xl ${iconColorMap[item.colorKey]} mb-4 sm:mb-6 block`}

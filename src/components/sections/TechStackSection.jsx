@@ -38,7 +38,7 @@ const TechStackSection = () => {
               key={idx}
               variants={cardVariants}
               {...liftOnHover}
-              className={`bg-surface-container p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border-l-4 ${category.borderColor} hover:bg-surface-container-high transition-all duration-300`}
+              className={`bg-surface-container/50 backdrop-blur-xl p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border-l-4 ${category.borderColor} hover:bg-surface-container-high/60 transition-all duration-300`}
             >
               <h4 className={`${category.color} font-label mb-4 sm:mb-6 text-xs sm:text-sm uppercase tracking-wider`}>
                 {category.title}
@@ -59,7 +59,7 @@ const TechStackSection = () => {
                         {skill.level}
                       </span>
                     </div>
-                    <div className="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+                    <div className="w-full bg-surface-container-highest/60 rounded-full h-1.5 overflow-hidden">
                       <motion.div
                         className={`h-full rounded-full ${levelBgColor[skill.level]}`}
                         initial={{ width: 0 }}

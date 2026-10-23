@@ -95,7 +95,7 @@ const ProjectDetail = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row gap-16 items-start bg-background"
+   className="min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row gap-16 items-start"
     >
       {/* القسم الأيسر: المعلومات (بدون تغيير) */}
       <motion.section

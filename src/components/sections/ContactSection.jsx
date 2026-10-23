@@ -62,8 +62,8 @@ const ContactSection = () => {
 
   return (
     <motion.section
-      className="py-16 sm:py-24 md:py-32 bg-surface-container-low"
-      id="contact"
+      className="py-16 sm:py-24 md:py-32 relative overflow-hidden"
+      id="devnest"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

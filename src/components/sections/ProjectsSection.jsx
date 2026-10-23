@@ -29,7 +29,7 @@ const scrollToTop = () => window.scrollTo(0, 0);
 const ProjectsSection = () => (
   <motion.section
     id="projects"
-    className="py-16 sm:py-24 md:py-32 bg-surface-container-lowest"
+    className="py-16 sm:py-24 md:py-32"
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true, amount: 0.1 }}

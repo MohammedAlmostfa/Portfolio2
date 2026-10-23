@@ -20,16 +20,16 @@ const DevNestSection = () => {
     >
       {/* الخلفية المتدرجة المتحركة */}
       <motion.div
-        className="absolute inset-0 logic-gradient opacity-5"
+        className="absolute inset-0 logic-gradient opacity-5 pointer-events-none"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.05 }}
         transition={{ duration: 1 }}
       />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         <motion.div
           variants={fadeInUp}
-          className="devnest-container bg-surface-container-low rounded-2xl sm:rounded-[2rem] md:rounded-[3rem] p-6 sm:p-12 md:p-20 border border-primary/40 flex flex-col md:flex-row items-center gap-8 md:gap-16"
+          className="devnest-container bg-surface-container-low/50 backdrop-blur-xl rounded-2xl sm:rounded-[2rem] md:rounded-[3rem] p-6 sm:p-12 md:p-20 border border-primary/40 flex flex-col md:flex-row items-center gap-8 md:gap-16"
         >
           {/* العمود الأيسر (النص) */}
           <motion.div
@@ -43,14 +43,14 @@ const DevNestSection = () => {
               {devnestText.titlePrefix}{' '}
               <span className="text-primary">{devnestText.titleHighlight}</span>
             </motion.h2>
-            
+
             <motion.p
               variants={itemVariants}
               className="text-base sm:text-lg md:text-xl text-on-surface-variant"
             >
               {devnestText.description}
             </motion.p>
-            
+
             <motion.div
               variants={itemVariants}
               className="grid grid-cols-2 gap-6 sm:gap-8"
@@ -68,7 +68,7 @@ const DevNestSection = () => {
                 </motion.div>
               ))}
             </motion.div>
-            
+
             <motion.div
               variants={itemVariants}
               className="flex flex-wrap gap-3 sm:gap-4"
@@ -76,7 +76,7 @@ const DevNestSection = () => {
               {tags.map((tag, idx) => (
                 <motion.span
                   key={idx}
-                  className="px-3 sm:px-4 py-2 bg-surface-container rounded-full text-xs sm:text-sm font-semibold"
+                  className="px-3 sm:px-4 py-2 bg-surface-container/60 border border-outline-variant/20 rounded-full text-xs sm:text-sm font-semibold"
                   whileHover={{ scale: 1.1, y: -2, backgroundColor: 'rgba(0,217,255,0.2)' }}
                   transition={{ type: 'spring', stiffness: 400 }}
                 >
@@ -94,10 +94,10 @@ const DevNestSection = () => {
             <div className="aspect-square bg-transparent rounded-3xl flex items-center justify-center relative">
               {/* مؤشر التحميل (يظهر أثناء تحميل الصورة) */}
               {!imageLoaded && !imageError && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-surface-container-low rounded-3xl z-10">
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-surface-container-low/60 rounded-3xl z-10">
                   <motion.div
                     animate={{ rotate: 360 }}
-                    transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+                    transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
                     className="w-12 h-12 border-4 border-primary-container border-t-transparent rounded-full"
                   />
                   <p className="text-primary text-sm mt-3">{devnestText.loadingText}</p>
@@ -120,7 +120,7 @@ const DevNestSection = () => {
 
               {/* رسالة الخطأ في حال فشل التحميل */}
               {imageError && (
-                <div className="absolute inset-0 flex items-center justify-center bg-surface-container-low text-red-400 rounded-3xl z-10">
+                <div className="absolute inset-0 flex items-center justify-center bg-surface-container-low/60 text-red-400 rounded-3xl z-10">
                   <span className="material-symbols-outlined text-4xl mr-2">error</span>
                   {devnestText.errorText}
                 </div>

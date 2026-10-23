@@ -18,11 +18,11 @@ import {
 const ExperienceSection = () => {
   return (
     <motion.section
-      className="py-16 sm:py-24 md:py-32 bg-surface-container-lowest"
-      id="experience"
+      className="py-16 sm:py-24 md:py-32 relative overflow-hidden"
+      id="devnest"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={staggerContainer}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8 timeline-grid grid md:grid-cols-2 gap-12 lg:gap-20">
