@@ -1,46 +1,47 @@
+
 // src/data/expertiseData.js
 
-// قائمة مجالات الخبرة
+// Core Technical Expertise
 export const expertiseItems = [
   {
     icon: 'php',
     title: 'Backend Development',
-    desc: 'Building monolithic and microservices architectures using Laravel and PHP with a focus on domain-driven design.',
+    desc: 'Building web applications and backend services using PHP and Laravel, with an emphasis on clean, secure, and maintainable code.',
     colorKey: 'primary',
   },
   {
     icon: 'api',
-    title: 'REST APIs',
-    desc: 'Designing and documenting comprehensive, versioned API endpoints for web and mobile clients.',
+    title: 'REST API Development',
+    desc: 'Developing RESTful APIs for web and mobile applications, including authentication, authorization, validation, and error handling.',
     colorKey: 'secondary',
   },
   {
     icon: 'database',
-    title: 'Database Optimization',
-    desc: 'Refining complex SQL queries, indexing strategies, and relational data modeling for MySQL.',
+    title: 'Database Design',
+    desc: 'Designing relational database schemas, managing data relationships, and working with MySQL and PostgreSQL.',
     colorKey: 'tertiary',
   },
   {
-    icon: 'sync',
-    title: 'Real-time Systems',
-    desc: 'Implementing WebSockets and event-driven communication for live tracking and instant notifications.',
+    icon: 'code',
+    title: 'ASP.NET Core',
+    desc: 'Developing backend applications with C#, ASP.NET Core, Entity Framework Core, and PostgreSQL through practical projects.',
     colorKey: 'primary-container',
   },
   {
-    icon: 'bolt',
-    title: 'Performance',
-    desc: 'Integrating Redis caching and background job processing to handle heavy computational loads.',
+    icon: 'layers',
+    title: 'Software Architecture',
+    desc: 'Applying separation of concerns, reusable components, and established design principles to build maintainable applications.',
     colorKey: 'secondary-container',
   },
   {
-    icon: 'cloud_done',
-    title: 'DevOps',
-    desc: 'Managing CI/CD pipelines, Docker containers, and cloud deployment for consistent production environments.',
+    icon: 'web',
+    title: 'Frontend Development',
+    desc: 'Building responsive web interfaces using Angular, TypeScript, HTML, and CSS, with practical experience integrating APIs.',
     colorKey: 'outline',
   },
 ];
 
-// خرائط الألوان (يمكن وضعها هنا أو في ملف منفصل مثل theme.js)
+// Border color mapping
 export const borderColorMap = {
   primary: 'border-primary',
   secondary: 'border-secondary',
@@ -50,6 +51,7 @@ export const borderColorMap = {
   outline: 'border-outline',
 };
 
+// Icon color mapping
 export const iconColorMap = {
   primary: 'text-primary',
   secondary: 'text-secondary',
@@ -59,8 +61,8 @@ export const iconColorMap = {
   outline: 'text-outline',
 };
 
-// النصوص الثابتة للقسم
+// Section Text
 export const expertiseText = {
-  badge: 'Core Strengths',
-  title: 'Technical Specialization',
+  badge: 'Technical Skills',
+  title: 'What I Bring to the Table',
 };

@@ -1,14 +1,15 @@
+
 // src/data/techStackData.js
 
-// النصوص الثابتة للقسم
+// Section Text
 export const techStackText = {
-  title: 'Stack of',
-  titleHighlight: 'Excellence',
+  title: 'My Technical',
+  titleHighlight: 'Toolbox',
   description:
-    'Mastery over the technologies that power the modern web, from server logic to devops workflows.',
+    'Technologies I use to build web applications, develop backend APIs, manage relational databases, and create responsive user interfaces.',
 };
 
-// ألوان النص حسب المستوى
+// Skill Level Text Colors
 export const levelColor = {
   Expert: 'text-emerald-400',
   High: 'text-blue-400',
@@ -16,7 +17,7 @@ export const levelColor = {
   Low: 'text-gray-400',
 };
 
-// ألوان الخلفية لخط التقدم حسب المستوى (جديدة)
+// Skill Level Progress Colors
 export const levelBgColor = {
   Expert: 'bg-emerald-400',
   High: 'bg-blue-400',
@@ -24,15 +25,17 @@ export const levelBgColor = {
   Low: 'bg-gray-400',
 };
 
-// فئات التقنيات (البيانات الأساسية)
+// Technology Categories
 export const techCategories = [
   {
-    title: 'Backend',
-    color: 'text-primary',        // للعنوان فقط
+    title: 'Backend Development',
+    color: 'text-primary',
     borderColor: 'border-primary',
     skills: [
-      { name: 'PHP', level: 'Expert', levelWidth: 'w-full' },
-      { name: 'Laravel', level: 'Expert', levelWidth: 'w-full' },
+      { name: 'PHP', level: 'High', levelWidth: 'w-4/5' },
+      { name: 'Laravel', level: 'High', levelWidth: 'w-4/5' },
+      { name: 'ASP.NET Core', level: 'Mid', levelWidth: 'w-3/5' },
+      { name: 'C#', level: 'Mid', levelWidth: 'w-3/5' },
     ],
   },
   {
@@ -40,37 +43,45 @@ export const techCategories = [
     color: 'text-primary',
     borderColor: 'border-primary',
     skills: [
-      { name: 'MySQL', level: 'Expert', levelWidth: 'w-full' },
+      { name: 'MySQL', level: 'High', levelWidth: 'w-4/5' },
+      { name: 'PostgreSQL', level: 'Mid', levelWidth: 'w-3/5' },
+      { name: 'SQL', level: 'Mid', levelWidth: 'w-3/5' },
     ],
   },
   {
-    title: 'DevOps',
+    title: 'Frontend Development',
+    color: 'text-primary-container',
+    borderColor: 'border-primary-container',
+    skills: [
+      { name: 'HTML / CSS', level: 'High', levelWidth: 'w-4/5' },
+      { name: 'JavaScript', level: 'High', levelWidth: 'w-4/5' },
+      { name: 'TypeScript', level: 'Mid', levelWidth: 'w-3/5' },
+      { name: 'Angular', level: 'Mid', levelWidth: 'w-3/5' },
+      { name: 'React', level: 'Low', levelWidth: 'w-2/5' },
+      { name: 'Bootstrap', level: 'High', levelWidth: 'w-4/5' },
+    ],
+  },
+  {
+    title: 'Tools & DevOps',
     color: 'text-primary',
     borderColor: 'border-primary',
     skills: [
-      { name: 'Git', level: 'High', levelWidth: 'w-4/5' },
-      { name: 'Docker', level: 'Mid', levelWidth: 'w-3/5' },
-      { name: 'CI/CD', level: 'Mid', levelWidth: 'w-3/5' },
+      { name: 'Git / GitHub', level: 'Mid', levelWidth: 'w-3/5' },
+      { name: 'Docker', level: 'Low', levelWidth: 'w-2/5' },
+      { name: 'CI/CD', level: 'Low', levelWidth: 'w-2/5' },
     ],
   },
   {
-    title: 'Frontend',
+    title: 'Programming Languages',
     color: 'text-primary-container',
     borderColor: 'border-primary-container',
     skills: [
-      { name: 'HTML/CSS/JS', level: 'Expert', levelWidth: 'w-full' },
-      { name: 'Bootstrap', level: 'High', levelWidth: 'w-4/5' },
-      { name: 'React', level: 'Low', levelWidth: 'w-2/5' },
-    ],
-  },
-  {
-    title: 'Languages',
-    color: 'text-primary-container',
-    borderColor: 'border-primary-container',
-    skills: [
-      { name: 'C++', level: 'Expert', levelWidth: 'w-full' },
-      { name: 'Java', level: 'High', levelWidth: 'w-4/5' },
-      { name: 'Python', level: 'Mid', levelWidth: 'w-3/5' },
+      { name: 'PHP', level: 'High', levelWidth: 'w-4/5' },
+      { name: 'C#', level: 'Mid', levelWidth: 'w-3/5' },
+      { name: 'JavaScript', level: 'High', levelWidth: 'w-4/5' },
+      { name: 'C++', level: 'Mid', levelWidth: 'w-3/5' },
+      { name: 'Python', level: 'Low', levelWidth: 'w-2/5' },
+      { name: 'Java', level: 'Low', levelWidth: 'w-2/5' },
     ],
   },
 ];

@@ -1,37 +1,35 @@
 // src/components/sections/HeroSection.jsx
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import heroImage from '../../assets/hero-image.jpg';
+import myPhoto from '../../assets/my-photo.png'; // صورتك بدون خلفية
 import {
   fadeInUp,
+  fadeIn,
+  blurIn,
+  zoomIn,
   staggerContainer,
   scaleOnHover,
-  imageScale,
 } from '../../animations/variants';
-import { heroText, stats, cvLink, imageConfig } from '../../data/heroData';
+import { heroText, stats, cvLink } from '../../data/heroData';
+
+// الشارات على أطراف المربع، متوسّطة عمودياً على الحافة
+const floatingChips = [
+  { label: 'Laravel',   icon: 'code',   position: 'top-[15%] left-0 -translate-x-1/4',    delay: 0 },
+  { label: 'React',     icon: 'web',    position: 'top-[40%] right-0 translate-x-1/4',    delay: 0.8 },
+  { label: 'DevSecOps', icon: 'shield', position: 'bottom-[18%] left-0 -translate-x-1/4', delay: 1.6 },
+];
 
 const HeroSection = () => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageError, setImageError] = useState(false);
-
-  const scrollToContact = (e) => {
+  const scrollTo = (selector) => (e) => {
     e.preventDefault();
-    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector(selector)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToProjects = (e) => {
-    e.preventDefault();
-    document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleDownloadCV = () => {
-    // يمكنك فتح الرابط في نافذة جديدة أو بدء التحميل مباشرة
-    window.open(cvLink, '_blank');
-  };
+  const handleDownloadCV = () => window.open(cvLink, '_blank');
 
   return (
     <section className="relative min-h-screen flex items-center pt-24 sm:pt-20 overflow-hidden">
-      {/* الخلفية المتحركة */}
+      {/* الخلفية */}
       <motion.div
         className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(0,217,255,0.08)_0%,_rgba(11,19,38,1)_70%)]"
         initial={{ opacity: 0 }}
@@ -40,17 +38,17 @@ const HeroSection = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full relative z-10">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* العمود الأيسر - أنيميشن متتابع */}
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+          {/* ========== العمود الأيسر ========== */}
           <motion.div
             className="relative"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className="space-y-6 sm:space-y-8">
-              {/* شارة Available for hire */}
+              {/* الشارة */}
               <motion.div
                 variants={fadeInUp}
                 className="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 gap-2"
@@ -61,7 +59,7 @@ const HeroSection = () => {
                     animate={{ scale: [1, 1.5, 1], opacity: [0.75, 0, 0.75] }}
                     transition={{ repeat: Infinity, duration: 1.5 }}
                   />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-container" />
                 </span>
                 <span className="text-xs sm:text-sm font-label text-primary uppercase tracking-widest">
                   {heroText.badge}
@@ -83,7 +81,7 @@ const HeroSection = () => {
                 </motion.span>
               </motion.h1>
 
-              {/* النص الوصفي */}
+              {/* الوصف */}
               <motion.p
                 variants={fadeInUp}
                 className="hero-subtitle text-lg sm:text-xl md:text-2xl text-on-surface-variant max-w-xl font-light"
@@ -92,17 +90,20 @@ const HeroSection = () => {
               </motion.p>
 
               {/* الأزرار */}
-              <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+              <motion.div
+                variants={fadeInUp}
+                className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
+              >
                 <motion.button
-                  onClick={scrollToContact}
-                  className="px-6 sm:px-8 py-3 sm:py-4 logic-gradient rounded-xl font-bold text-on-primary hover:shadow-[0_0_30px_rgba(0,217,255,0.3)] transition-all text-center text-sm sm:text-base"
+                  onClick={scrollTo('#contact')}
+                  className="px-6 sm:px-8 py-3 sm:py-4 logic-gradient rounded-xl font-bold text-on-primary hover:shadow-[0_0_30px_rgba(0,217,255,0.3)] transition-shadow text-center text-sm sm:text-base"
                   {...scaleOnHover}
                 >
                   {heroText.buttonContact}
                 </motion.button>
                 <motion.button
-                  onClick={scrollToProjects}
-                  className="px-6 sm:px-8 py-3 sm:py-4 border border-outline-variant/30 rounded-xl font-bold hover:bg-surface-container transition-all text-center text-sm sm:text-base"
+                  onClick={scrollTo('#projects')}
+                  className="px-6 sm:px-8 py-3 sm:py-4 border border-outline-variant/30 rounded-xl font-bold hover:bg-surface-container transition-colors text-center text-sm sm:text-base"
                   {...scaleOnHover}
                 >
                   {heroText.buttonWork}
@@ -122,9 +123,9 @@ const HeroSection = () => {
                 variants={fadeInUp}
                 className="stats-grid grid grid-cols-3 gap-4 sm:gap-8 pt-8 sm:pt-12"
               >
-                {stats.map((stat, idx) => (
+                {stats.map((stat) => (
                   <motion.div
-                    key={idx}
+                    key={stat.label}
                     whileHover={{ y: -5, transition: { type: 'spring', stiffness: 300 } }}
                   >
                     <div className="text-3xl sm:text-4xl font-bold text-white font-headline">
@@ -139,74 +140,56 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* العمود الأيمن - الصورة مع تحميل متحرك */}
+          {/* ========== العمود الأيمن: صورتك ========== */}
           <motion.div
-            className="hidden md:block relative"
+            className="flex justify-center relative"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
           >
-            <motion.div
-              className="aspect-square bg-surface-container-low rounded-3xl overflow-hidden relative group"
-              variants={imageScale}
-            >
-              {/* مؤشر التحميل */}
-              {!imageLoaded && !imageError && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-surface-container-low z-10">
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
-                    className="w-12 h-12 border-4 border-primary-container border-t-transparent rounded-full"
-                  />
-                  <p className="text-primary text-sm mt-3">{heroText.loadingImage}</p>
-                </div>
-              )}
-
-              {/* الصورة */}
-              <motion.img
-                className={`object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ${
-                  imageLoaded ? 'opacity-100' : 'opacity-0'
-                }`}
-                src={heroImage}
-                alt={heroText.imageAlt}
-                whileHover={{ scale: imageConfig.hoverScale }}
-                transition={{ duration: imageConfig.transitionDuration }}
-                onLoad={() => setImageLoaded(true)}
-                onError={() => {
-                  setImageLoaded(false);
-                  setImageError(true);
-                }}
+            {/* المربع: الصورة بنصه والشارات على أطرافه */}
+            <div className="relative w-full max-w-[18rem] sm:max-w-sm md:max-w-md lg:max-w-lg aspect-[4/5]">
+              {/* 1) Glow خلف الشخص */}
+              <motion.div
+                variants={zoomIn}
+                className="absolute inset-x-8 bottom-0 top-10 rounded-full bg-primary-container/20 blur-3xl"
               />
 
-              {/* رسالة الخطأ */}
-              {imageError && (
-                <div className="absolute inset-0 flex items-center justify-center bg-surface-container-low text-red-400 z-10">
-                  <span className="material-symbols-outlined text-4xl mr-2">error</span>
-                  {heroText.errorImage}
-                </div>
-              )}
+              {/* 2) صورتك: بنص المربع بالضبط (بدون translate) */}
+              <motion.img
+                variants={blurIn}
+                src={myPhoto}
+                alt={heroText.imageAlt}
+                draggable={false}
+                className="absolute bottom-0 left-4 h-full w-[calc(100%-2rem)] object-contain object-bottom select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+              />
 
-              <div className="absolute inset-0 logic-gradient mix-blend-overlay opacity-30"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 border-2 border-primary-container/20 rounded-full flex items-center justify-center">
+              {/* 3) تلاشي من تحت */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[rgba(11,19,38,1)] to-transparent pointer-events-none" />
+
+              {/* 4) الشارات على الأطراف */}
+              {floatingChips.map(({ label, icon, position, delay }) => (
+                <motion.div
+                  key={label}
+                  variants={fadeIn}
+                  className={`absolute z-10 ${position}`}
+                >
                   <motion.div
-                    className="w-48 h-48 border-2 border-primary-container/40 rounded-full flex items-center justify-center"
-                    animate={{ rotate: 360 }}
-                    transition={{ repeat: Infinity, duration: imageConfig.rotationDuration, ease: 'linear' }}
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut', delay }}
+                    className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/30 shadow-lg"
                   >
-                    <motion.span
-                      className="material-symbols-outlined text-primary-container text-6xl sm:text-8xl"
-                      style={{ fontVariationSettings: "'FILL' 1" }}
-                      animate={{ scale: imageConfig.iconScale }}
-                      transition={{ repeat: Infinity, duration: imageConfig.iconPulseDuration, ease: 'easeInOut' }}
-                    >
-                      terminal
-                    </motion.span>
+                    <span className="material-symbols-outlined text-primary text-base sm:text-lg">
+                      {icon}
+                    </span>
+                    <span className="text-[10px] sm:text-xs font-label uppercase tracking-wider text-white">
+                      {label}
+                    </span>
                   </motion.div>
-                </div>
-              </div>
-            </motion.div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>

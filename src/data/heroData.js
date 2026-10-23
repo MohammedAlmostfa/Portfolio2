@@ -1,30 +1,32 @@
+
 // src/data/heroData.js
 
-// النصوص الرئيسية للقسم
+// Hero Section Text
 export const heroText = {
-  badge: 'Available for hire',
+  badge: 'Open to Opportunities',
   firstName: 'Mohammed',
   lastName: 'Almostfa',
-  subtitle: 'Backend Developer building scalable systems and powering modern web applications.',
+  subtitle:
+    'Full-Stack Developer with a strong backend focus, building secure and maintainable web applications using Laravel, ASP.NET Core, and Angular.',
   buttonContact: 'Get in Touch',
   buttonWork: 'View My Work',
   buttonCV: 'Download CV',
   loadingImage: 'Loading image...',
   errorImage: 'Failed to load image',
-  imageAlt: 'Developer workspace',
+  imageAlt: 'Mohammed Almostfa - Full-Stack Developer',
 };
 
-// الإحصائيات المعروضة
+// Portfolio Statistics
 export const stats = [
-  { value: '2+', label: 'Years Exp' },
-  { value: '10+', label: 'Projects' },
-  { value: '100%', label: 'Satisfaction' },
+  { value: '2+', label: 'Years of Experience' },
+  { value: '10+', label: 'Projects Built' },
+  { value: '3', label: 'Core Technologies' },
 ];
 
-// رابط تحميل السيرة الذاتية (يمكنك تحديثه بالمسار الصحيح)
+// CV Download
 export const cvLink = '/cv/mohammed_almostfa_cv.pdf';
 
-// إعدادات إضافية للصورة (اختياري)
+// Image Animation Settings
 export const imageConfig = {
   hoverScale: 1.05,
   transitionDuration: 0.5,

@@ -1,13 +1,14 @@
+
 // src/data/experienceData.js
 
-// قائمة الخبرات المهنية
+// Professional Experience
 export const experiences = [
   {
     period: '2025 - Present',
-    title: 'Co-Founder & Backend Lead',
+    title: 'Co-Founder & Backend Developer',
     company: 'DevNest Development Team',
     description:
-      'Directing technical architecture for all client projects, ensuring code quality and infrastructure scalability.',
+      'Co-founded a software development team, contributing to backend development, RESTful API design, database architecture, task planning, code reviews, and client project delivery. Focused on building secure, maintainable solutions using Laravel and related technologies.',
     active: true,
   },
   {
@@ -15,39 +16,38 @@ export const experiences = [
     title: 'Frontend Developer Trainee',
     company: 'Focal X Academy',
     description:
-      'Completed intensive training in frontend development including HTML, CSS, JavaScript, and React. Gained experience in API integration and responsive UI design.',
+      'Completed frontend development training covering HTML, CSS, JavaScript, and React. Practiced responsive UI development and API integration while strengthening frontend development fundamentals.',
     active: false,
   },
   {
     period: '2024 - 2025',
-    title: 'Backend Developer Intern',
-    company: 'Focal X Agency',
+    title: 'Backend Developer Trainee',
+    company: 'Focal X Academy',
     description:
-      'Developed production-grade Laravel applications with Redis caching and real-time features. Worked with advanced backend concepts and Queue Workers. Awarded a Recommendation Certificate for strong performance.',
+      'Completed intensive backend development training focused on PHP, Laravel, RESTful APIs, and database integration. Earned a Recommendation Certificate in recognition of strong performance.',
     active: false,
   },
 ];
 
-// بيانات التعليم
+// Education
 export const education = {
-  title: 'B.E in Computer & Automation Engineering',
+  title: 'B.Sc. in Computer Automation Engineering',
   institution: 'Homs University',
   period: '2022 - 2026',
   description:
-    'Focusing on system architecture, algorithms, and automated control systems.',
+    'Studied computer and automation engineering, combining programming, algorithms, and systems fundamentals. Graduated with a graduation project, CertiChain, that received a score of 95/100.',
 };
 
-// قائمة الشهادات
+// Certifications & Training
 export const certifications = [
-  'Recommendation Certificate/attaneded Certificate – Focal X Agency (Backend Developer Internship)',
-'Recommendation Certificate/attaneded Certificate – Focal X Agency (Frontend Developer Internship)',
-
-  'Digital Product Management-Homs university/innovent/ict',
+  'Backend Development Training — Focal X Academy',
+  'Frontend Development Training — Focal X Academy',
+  'Digital Product Management — Homs University ICT Incubator (SPRINT0)',
 ];
 
-// النصوص الثابتة للقسم
+// Section Labels
 export const experienceText = {
-  leftTitle: 'Professional Journey',
-  rightTitleAcademic: 'Academic Background',
-  rightTitleCertifications: 'Certifications',
+  leftTitle: 'Professional Experience',
+  rightTitleAcademic: 'Education',
+  rightTitleCertifications: 'Certifications & Training',
 };

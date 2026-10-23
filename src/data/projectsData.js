@@ -59,6 +59,12 @@ export const projects = {
     tech: ['React', 'Capacitor', 'SQLite'],
     link: 'vocaApp',
   },
+   solarEnergy: {
+    name: 'Solar Energy Store',
+    desc: 'A solar energy e-commerce application built with Angular, featuring product browsing, product details, shopping cart functionality, checkout flows, and an admin dashboard for managing products and orders.',
+    tech: ['Angular', 'TypeScript', 'HTML', 'SCSS'],
+    link: 'Solar%20Energy%20Store',
+  },
 };
 
 // يمكن تصدير مصفوفة المشاريع إذا أردت التكرار لاحقاً
